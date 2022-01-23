@@ -1,0 +1,1429 @@
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ cd $HOME
+gftadmin@ubuntu:~$ ssh 
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec]
+           [-D [bind_address:]port] [-E log_file] [-e escape_char]
+           [-F configfile] [-I pkcs11] [-i identity_file]
+           [-J [user@]host[:port]] [-L address] [-l login_name] [-m mac_spec]
+           [-O ctl_cmd] [-o option] [-p port] [-Q query_option] [-R address]
+           [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]]
+           [user@]hostname [command]
+gftadmin@ubuntu:~$ man ssh
+gftadmin@ubuntu:~$ man ssh-keygen 
+gftadmin@ubuntu:~$ ssh-keygen -b 4096 -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/gftadmin/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/gftadmin/.ssh/id_rsa.
+Your public key has been saved in /home/gftadmin/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:JkR9xhlOGOtCOPayu/80z5qJhObVgGElFWiOHHRllB4 gftadmin@ubuntu
+The key's randomart image is:
++---[RSA 4096]----+
+| .. o=O+.+oo     |
+|  ..o*E o+=      |
+| . =*.o..o.      |
+|  oo.B..         |
+|    o = S        |
+|     + *         |
+|    + o +        |
+|   o + o *       |
+|    +oo.=.o      |
++----[SHA256]-----+
+gftadmin@ubuntu:~$ cat .ssh/id_rsa
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,C9157D2310AF018283F0973BA13AD80B
+
+QHm27WU2z7BEp5YdYFn+NZU6CLXvt7l+beqifMX0vWG/zvVcBEIrQbeC5nuO4nNj
+pNNWrk/XpPy1cGAC38HhJc18dWM9pTqVGQn+beL04vMnTp/Ud6dVf9yrG2A1BVdT
+e+AAGH8DinZbVaWWBGk4o/W3qwQzu8LCQpZ0vqIbFkbFEg/jbZOwLcjZMriw20H/
++JEIu0ZjxtGX7x3xfiUFftGysXWjiesqmi3AHnyEfXjje/yiQ/+a1UXSiaQYVts2
+bEeuUy4x3JvrWo1ismX3/BJcmjGgk7BSQhsvwHS0bmJuZbeHz89ip4gPzT0NHpd6
+eBuB+DdiH0O5+uijt+TBN9Q5n/RWTXA4Xm5nmKZD9kDy2+xCY5PuVOgA7pv919dS
+FWCqH8G5+xn2ClAKwf1XRvhU5sj5ki8Gvr/o1SL0FzKoG1dxe/VimJQDTOE89Ti4
+yhkeFIf353Xzgmb58zhZg4PTtgVqRQEqylUV/EDEP8p3JA2K8sjLqRcHdMUF8zjx
+Pajb0jWxJ4tYdotCryjfWKVb9JG3OPj+CGkVQL++GaJoS64WMo5zD5rsOqNc2QR+
+Q68jYqX6rywCQ9Uza4qL/2zMTi129ZNpwIp6fel793wk0HP4zTLR9GnDokouptqQ
+tULECSbA0HeF5B438537gvBG8wIJsa6k4bMpQK3/5HJGdTR5Ap0pEd/RCAuwcBMT
+dWW4s6A0eMzsKodQmacoe4AVpNvELH8mROlS9dHhz5uobXvpHKjmQa6TC8JnzKp4
+HOSyLujonshyhUhvXmtvPJj9Q7yqCexpNrEaHAS3NCXQfUn/yXUgpPmbAlacaj/T
+a+jFPUwLXzaK5bKsYNdA/o0ZgLOIl8P7Op0mKQvaajdU1iWKydY+WbDKJ9AG7NTp
+/XbeLOFMAScEEhgta+CGmzqSjYxWJcYu8rMq/Xrj22SZGFXnBgHehWxGdh9mK+z6
+1mrqZdZB2FRtqxE5EsHnA5woeLpFZPbtWTZnwcfIIEV4dTG0RWTUx/FS3R+QnMlX
+sT5PiHH0qR031Dl3HqnGcwg82uZTAxoDToNU/7peBP7qYUh8upXr9E/dC60+BHGW
+MU3eo2im4NQvgcjRqqAZHV776a3xuFAPPJZrmX+Bg6whAzCkddeFxmSYFf1vm0aV
+vuyGOlCKCgbfw525JWK+Hnu4T04ByXuBu5QyiDDP7LamV9ORJYZYylFz1+EBptb9
+QOC2/0K5r309XS95v/5JABRx+Gf82Lk8mUtVQ/CA1sw2ylSNIrzOjSgxB63TLCB+
+X5ToqBZBnrIW00JZVgAe7xWJyIXT6YPLYbf28gfmBKjtOj1NNXuwCG85o+bTWq0m
+5fja0U1fNRw7m/DcdEp0O02T24cNU6f+7Ifjq+WOILWqmF6CNDmcd4vw6uPr28hf
+bGkCLN5IYfzKAjpNyoTcCqCPEDyYbKO08QqSrC4o1MiYb9+2OeeF2uPUprTj8wz1
+zm7+exAqzHAoIhVCulUL1d2bwE9A4CeApNP7GmyHVOpmh0gP0T9RsMYPOlPVI73y
+KdcTYi0/AJ5ohmPhaDa6d+sVV/5E1VKJoxm747qB5p+YyK9vZI9ItZFgOZTAoZxQ
+UIsmsPvrsr6V07omFaN51QK2jSVZtF/lA2SKPS14kxS+xMa+QpXgT6cSKQsrMQCV
+LrjmHj7T5cYGnASaCa/aGH8k0UZKDzLh6OQADZYs/Tb3aEBFPD4Adi5Aht8xA1Hn
+vlJKMHIoF71y6DNjfomyktVvhGNNerYLW/nKjn2xY6wT93+ORec5rwdSz9p5GfcI
+Z6Ami+su/R1LeAENj5SM/UyQdflG2ZMtSf/5F5do1lv108lrz0WwASK5h9t9Nj3K
+Xp7K2yj2aPe6iGh5uUoIk3adTHMtbDLhGO511K8UQ+IkaCjiZbLRDjqtRVdyOYij
+SSVAh2vvQmCfCQj0i6CbmC/EBdlyB9cF2vRLav2n4JnekXqeXUVA2HqxFCwllNTs
+HsanyDd24Lhze2rMVquGFpqoqFbfqT37df9f+WRc5Ndcn2SpKEVdf1Mex7Wyymat
+5aQ/nQRwdYfRfJ9KLQWCnjbUm8M1DnW6AY3aEBfbpa51zfYOMWAxUwa8XzIvceO8
+9hm4u5uQywFqXyPMOqiZQT57hpgAr08g+2K9X77W+WOib1sZnvTHI7Q7bfenS7wa
+W+eADhlPifkdfEN1fuqSUflrDjxmUyFzRw+XTB8MM+h149aOfirWXmRWQVZ80scn
+rHB/rJEo18V9kNPITNI4FKN+lWrPhI/9hR63xkYEBGF1UyN0L12RlP5dys44Uib1
+AxRDgju38Ns11k9z1WsSjcImCTYSAB4EwtbP6kyPwn9SRjS4Z/TlPOpDRNXotJK0
+OacCUWfOhuYDaBdOkCWbLATMtgsFIk8TzjzZJ2j3WaPd52G6eWnquy5MLVxtfJIO
+OFEqKyZzsubTfMuG3npwjRjWWifSpEWrPG2gqLZwzPTjlb+2/b4TymBoaIb/ldux
+FYFMSNt3ZZJQiRIwuiyVowOu2fmWso5+SqKrlFhWhzf6k1TC5eS2sqtInoCGXNSk
+Xmk/qKUagwNyLsGUXj8Oi2F678xsQpkBZ66aUgR9z/dxkS+69NG7pecWUwQ45jln
+XJhrEl9KzEC7wUkAS7fFNJEdawta9BcG03AgRUNxOily9QwoNwVeDepmWgkgLHYA
+bs0YDP52N4tWcaK1WHPNOIXZZwrKCpF5yUCWYX31yCBA+yHq9dQDgHP7qVHSnIq2
+t0EkPnVmRvmjl5TV7rGIoqMx381r9rquXF5CNoZsHvPKuqbnYoRdFHoT+yi7gH/r
+iZH/QUIlTMseLQBkviH3czj81OLmUg7FlPeIL6OSqTGzGDWffFUhi5t/gP+e+KDQ
+zlHZy+hWwjSHC02i6tMq6AwmQoJRISyLby9Nb2ic8i4VOdsMrpR9AHZU/fA3Jz/4
+lGik3QG1UeJHboKIDEgq2N/3Dik4n3ST1gHME2vyFw1KzDC9YtHgWcL75e8gicEk
+2VhU5Cdza5Pg2Sxf8+DwT5KNW+PLsb5/6fOYupOCLSpxfzwAV6JnVbEUm+SfXNvT
+EOv4SoW4sembuWism9YwAhX+y2FmU+71w7a+ZJP2RFDVNsJ445ODenSHwOwzpEUV
+-----END RSA PRIVATE KEY-----
+gftadmin@ubuntu:~$ cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBO5nVESmjltpFkc9n3eFEbDY3XcY0qhLhDKFvLkbIpemfbpA/POc9KoYWfAQP01nKV9sriy1NaJBCu9Fp9y9tmyGngnAh3/jiq31JtyBkgzZA1FFCMQjPjbPBl+Md893Mxm6Rjcbuyz+LKDaoIamv3n8GQZPOahI0FTOcG843fJvDsKT59vaJjAWSJ07tL8nU1Fpvevt+ku9RYgOVzUTLNkvsE4hNyokqAcBh4U0S8oEsOD3HyitF1cAThX1J8EoEkiqSUyQ3kAj23sn8QtHWBtKHSlqt9A0QWo97qSc9PjGVwzE0UOk1tMha7odD33bcam4TAe0VFl04fR9lTGTobK93tiZWJ6FXsDIPEAIqCEOQ7ISaOBMfq4LXsYinqKVwutinVScc+Ojdt4eqT0cfuooMMC6tlPHpFimOZUoOsAvzkBB356diClb6QlPyLR7nWdV5G45sx6II6+o8TDLhNZezGxXXyQz/VRDErnipmMNeVu/9ztxjzujx2/6O44IrzlJU3O/qTjpKYXRF3Frje0pg1LhBeNlKzfxS9miD2/lPgBzvjOf53+H1rPI/NV4baIvQRi0MtW5U15+doHm4kjUHikbPIpkkpOr9t6wi9q7uS+Vpl1/XdfE9PcgjX2i4nS+4M1pmiKBqD/Q4a07+dezvcZ/T564lBT9litibTw== gftadmin@ubuntu
+gftadmin@ubuntu:~$ sudo su
+[sudo] password for gftadmin: 
+[oh-my-zsh] Would you like to update? [Y/n] y
+Updating Oh My Zsh
+remote: Enumerating objects: 27863, done.
+remote: Counting objects: 100% (27861/27861), done.
+remote: Compressing objects: 100% (11871/11871), done.
+remote: Total 27096 (delta 15368), reused 25728 (delta 14017), pack-reused 0
+Receiving objects: 100% (27096/27096), 6.42 MiB | 7.09 MiB/s, done.
+Resolving deltas: 100% (15368/15368), completed with 463 local objects.
+From https://github.com/ohmyzsh/ohmyzsh
+ * branch            master     -> FETCH_HEAD
+   51772732..0b08b70b master     -> origin/master
+ .github/CODEOWNERS                                                   |     8 +-
+ .github/FUNDING.yml                                                  |     2 +-
+ .github/ISSUE_TEMPLATE/bug_report.md                                 |    45 -
+ .github/ISSUE_TEMPLATE/bug_report.yml                                |    68 +
+ .github/ISSUE_TEMPLATE/bug_report_omz.yml                            |    77 +
+ .github/ISSUE_TEMPLATE/config.yml                                    |     3 +
+ .github/ISSUE_TEMPLATE/feature_request.md                            |    29 -
+ .github/ISSUE_TEMPLATE/feature_request.yml                           |    37 +
+ .github/ISSUE_TEMPLATE/support.md                                    |    10 -
+ .github/actions/spelling/README.md                                   |    15 +
+ .github/actions/spelling/advice.md                                   |    25 +
+ .github/actions/spelling/allow.txt                                   |     0
+ .github/actions/spelling/excludes.txt                                |    41 +
+ .github/actions/spelling/expect.txt                                  |  4494 ++++++++++++++++++++++++++
+ .github/actions/spelling/patterns.txt                                |    73 +
+ .github/actions/spelling/reject.txt                                  |     7 +
+ .github/workflows/main.yml                                           |     1 +
+ .github/workflows/project.yml                                        |   131 +
+ CONTRIBUTING.md                                                      |   121 +-
+ LICENSE.txt                                                          |     2 +-
+ README.md                                                            |    72 +-
+ SECURITY.md                                                          |    24 +
+ lib/cli.zsh                                                          |   980 ++++--
+ lib/clipboard.zsh                                                    |     2 +-
+ lib/completion.zsh                                                   |    11 +-
+ lib/correction.zsh                                                   |     1 +
+ lib/diagnostics.zsh                                                  |     4 +-
+ lib/directories.zsh                                                  |     4 +-
+ lib/functions.zsh                                                    |    56 +-
+ lib/git.zsh                                                          |    32 +-
+ lib/nvm.zsh                                                          |     2 +-
+ lib/prompt_info_functions.zsh                                        |     3 +-
+ lib/spectrum.zsh                                                     |     6 +-
+ lib/termsupport.zsh                                                  |    33 +-
+ lib/theme-and-appearance.zsh                                         |     2 +-
+ oh-my-zsh.sh                                                         |    49 +
+ plugins/ag/README.md                                                 |    13 +
+ plugins/ag/_ag                                                       |    66 +
+ plugins/aliases/.gitignore                                           |     1 +
+ plugins/aliases/README.md                                            |    22 +
+ plugins/aliases/aliases.plugin.zsh                                   |    11 +
+ plugins/aliases/cheatsheet.py                                        |    55 +
+ plugins/aliases/termcolor.py                                         |   168 +
+ plugins/ansible/ansible.plugin.zsh                                   |     4 +-
+ plugins/ant/README.md                                                |     4 +-
+ plugins/ant/_ant                                                     |    22 +
+ plugins/ant/ant.plugin.zsh                                           |    18 +-
+ plugins/arcanist/README.md                                           |     2 +
+ plugins/arcanist/arcanist.plugin.zsh                                 |     2 +
+ plugins/archlinux/README.md                                          |   291 +-
+ plugins/archlinux/archlinux.plugin.zsh                               |   293 +-
+ plugins/asdf/asdf.plugin.zsh                                         |    22 +-
+ plugins/autojump/autojump.plugin.zsh                                 |     2 +
+ plugins/aws/README.md                                                |     9 +-
+ plugins/aws/aws.plugin.zsh                                           |    91 +-
+ plugins/battery/README.md                                            |    19 +-
+ plugins/battery/battery.plugin.zsh                                   |    96 +-
+ plugins/bazel/_bazel                                                 |     2 +-
+ plugins/bedtools/README.md                                           |     5 +
+ plugins/bedtools/_bedtools                                           |    64 +
+ plugins/bgnotify/bgnotify.plugin.zsh                                 |    26 +-
+ plugins/bower/bower.plugin.zsh                                       |    10 +-
+ plugins/branch/README.md                                             |    48 +-
+ plugins/branch/branch.plugin.zsh                                     |    44 +-
+ plugins/brew/README.md                                               |    22 +-
+ plugins/brew/brew.plugin.zsh                                         |    16 +-
+ plugins/bundler/_bundler                                             |     3 +-
+ plugins/bundler/bundler.plugin.zsh                                   |    13 +-
+ plugins/cargo/README.md                                              |    10 +-
+ plugins/cargo/_cargo                                                 |   407 ---
+ plugins/cargo/cargo.plugin.zsh                                       |    15 +
+ plugins/catimg/catimg.plugin.zsh                                     |     2 +-
+ plugins/catimg/catimg.sh                                             |     2 +-
+ plugins/chruby/README.md                                             |     3 +-
+ plugins/chruby/chruby.plugin.zsh                                     |   165 +-
+ plugins/chucknorris/README.md                                        |     4 +-
+ plugins/chucknorris/chucknorris.plugin.zsh                           |    36 +-
+ plugins/chucknorris/fortunes/chucknorris                             |    20 +-
+ plugins/cloudapp/README.md                                           |    26 -
+ plugins/cloudapp/cloudapp.plugin.zsh                                 |     4 -
+ plugins/colemak/.gitignore                                           |     1 +
+ plugins/colemak/colemak.plugin.zsh                                   |    18 +-
+ plugins/colored-man-pages/README.md                                  |    14 +
+ plugins/colored-man-pages/colored-man-pages.plugin.zsh               |    78 +-
+ plugins/colored-man-pages/nroff                                      |    12 +
+ plugins/colorize/colorize.plugin.zsh                                 |     4 +-
+ plugins/command-not-found/README.md                                  |     2 +
+ plugins/command-not-found/command-not-found.plugin.zsh               |    97 +-
+ plugins/common-aliases/README.md                                     |   102 +-
+ plugins/common-aliases/common-aliases.plugin.zsh                     |     4 +-
+ plugins/composer/README.md                                           |    38 +-
+ plugins/composer/composer.plugin.zsh                                 |   104 +-
+ plugins/copybuffer/copybuffer.plugin.zsh                             |     6 +-
+ plugins/cp/README.md                                                 |     2 +-
+ plugins/cp/cp.plugin.zsh                                             |     2 +-
+ plugins/cpanm/_cpanm                                                 |     2 +-
+ plugins/debian/README.md                                             |    13 +-
+ plugins/debian/debian.plugin.zsh                                     |    26 +-
+ plugins/deno/README.md                                               |    19 +
+ plugins/deno/deno.plugin.zsh                                         |    40 +
+ plugins/dirhistory/README.md                                         |    41 +-
+ plugins/dirhistory/dirhistory.plugin.zsh                             |   142 +-
+ plugins/django/README.md                                             |    38 +-
+ plugins/django/django.plugin.zsh                                     |     3 +
+ plugins/docker-compose/README.md                                     |    37 +-
+ plugins/docker-compose/_docker-compose                               |    12 +-
+ plugins/docker-compose/docker-compose.plugin.zsh                     |    45 +-
+ plugins/docker-machine/_docker-machine                               |     6 +-
+ plugins/docker/_docker                                               |   115 +-
+ plugins/dotenv/dotenv.plugin.zsh                                     |    72 +-
+ plugins/dotnet/README.md                                             |     1 +
+ plugins/dotnet/dotnet.plugin.zsh                                     |     3 +-
+ plugins/drush/README.md                                              |   117 +-
+ plugins/drush/drush.plugin.zsh                                       |    93 +-
+ plugins/emacs/emacs.plugin.zsh                                       |    91 +-
+ plugins/emacs/emacsclient.sh                                         |    51 +-
+ plugins/ember-cli/README.md                                          |    45 +-
+ plugins/ember-cli/_ember-cli                                         |   189 ++
+ plugins/ember-cli/ember-cli.plugin.zsh                               |     9 +-
+ plugins/emoji/README.md                                              |    40 +-
+ plugins/emoji/emoji-char-definitions.zsh                             |  7861 ++++++++++++++++++++++++++++++++++++++++------
+ plugins/emoji/emoji-data.txt                                         |  5424 ++++++++++++++++++++++++--------
+ plugins/emoji/emoji.plugin.zsh                                       |   232 +-
+ plugins/emoji/gemoji_db.json                                         | 21538 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ plugins/emoji/update_emoji.pl                                        |   113 -
+ plugins/emoji/update_emoji.py                                        |   213 ++
+ plugins/emotty/emotty.plugin.zsh                                     |     7 +-
+ plugins/extract/README.md                                            |     3 +
+ plugins/extract/_extract                                             |     2 +-
+ plugins/extract/extract.plugin.zsh                                   |   147 +-
+ plugins/fastfile/README.md                                           |    13 +-
+ plugins/fastfile/fastfile.plugin.zsh                                 |    23 +-
+ plugins/fd/README.md                                                 |     4 +-
+ plugins/fd/_fd                                                       |   329 +-
+ plugins/fedora/README.md                                             |     1 -
+ plugins/fedora/fedora.plugin.zsh                                     |     3 -
+ plugins/fig/README.md                                                |     9 +
+ plugins/fig/fig.plugin.zsh                                           |    13 +
+ plugins/flutter/README.md                                            |    29 +-
+ plugins/flutter/flutter.plugin.zsh                                   |    15 +-
+ plugins/fnm/README.md                                                |     9 +
+ plugins/fnm/fnm.plugin.zsh                                           |    26 +
+ plugins/fossil/_fossil                                               |    32 +
+ plugins/fossil/fossil.plugin.zsh                                     |    68 +-
+ plugins/frontend-search/{_frontend-search.sh => _frontend}           |     0
+ plugins/frontend-search/frontend-search.plugin.zsh                   |    46 +-
+ plugins/fzf/README.md                                                |     2 +-
+ plugins/fzf/fzf.plugin.zsh                                           |   306 +-
+ plugins/gcloud/gcloud.plugin.zsh                                     |     1 +
+ plugins/genpass/README.md                                            |    66 +
+ plugins/genpass/genpass-apple                                        |    79 +
+ plugins/genpass/genpass-monkey                                       |    32 +
+ plugins/genpass/genpass-xkcd                                         |    68 +
+ plugins/genpass/genpass.plugin.zsh                                   |     1 +
+ plugins/gh/README.md                                                 |    23 +
+ plugins/gh/gh.plugin.zsh                                             |    27 +
+ plugins/git-auto-fetch/README.md                                     |    43 +-
+ plugins/git-auto-fetch/git-auto-fetch.plugin.zsh                     |    83 +-
+ plugins/git-flow/README.md                                           |    43 +-
+ plugins/git-flow/_git-flow                                           |   327 ++
+ plugins/git-flow/git-flow.plugin.zsh                                 |   386 +--
+ plugins/git-prompt/README.md                                         |    10 +-
+ plugins/git-prompt/git-prompt.plugin.zsh                             |    17 +-
+ plugins/git-prompt/gitstatus.py                                      |    24 +-
+ plugins/git/README.md                                                |    58 +-
+ plugins/git/git.plugin.zsh                                           |    63 +-
+ plugins/gitfast/_git                                                 |   129 +-
+ plugins/gitfast/git-completion.bash                                  |    75 +-
+ plugins/gitfast/gitfast.plugin.zsh                                   |     5 +
+ plugins/gitfast/update                                               |     2 +-
+ plugins/github/README.md                                             |     4 +-
+ plugins/gnu-utils/gnu-utils.plugin.zsh                               |    45 +-
+ plugins/go/README.md                                                 |     1 -
+ plugins/go/go.plugin.zsh                                             |     3 -
+ plugins/golang/README.md                                             |    41 +-
+ plugins/golang/_golang                                               |   249 ++
+ plugins/golang/golang.plugin.zsh                                     |   272 +-
+ plugins/gpg-agent/README.md                                          |     2 +-
+ plugins/gpg-agent/gpg-agent.plugin.zsh                               |    25 +-
+ plugins/grails/grails.plugin.zsh                                     |     2 +-
+ plugins/grc/README.md                                                |    15 +
+ plugins/grc/grc.plugin.zsh                                           |    17 +
+ plugins/grunt/grunt.plugin.zsh                                       |     4 +-
+ plugins/hanami/README.md                                             |    63 +-
+ plugins/hanami/hanami.plugin.zsh                                     |     6 +-
+ plugins/helm/helm.plugin.zsh                                         |    25 +-
+ plugins/heroku/heroku.plugin.zsh                                     |    16 +-
+ plugins/history-substring-search/history-substring-search.plugin.zsh |     6 +-
+ plugins/history-substring-search/history-substring-search.zsh        |     4 +-
+ plugins/hitchhiker/.gitignore                                        |     1 +
+ plugins/hitchhiker/README.md                                         |    44 +
+ plugins/hitchhiker/fortunes/hitchhiker                               |   275 ++
+ plugins/hitchhiker/hitchhiker.plugin.zsh                             |    28 +
+ plugins/hitokoto/hitokoto.plugin.zsh                                 |    18 +-
+ plugins/invoke/README.md                                             |    10 +
+ plugins/invoke/invoke.plugin.zsh                                     |     5 +
+ plugins/ipfs/_ipfs                                                   |    96 +-
+ plugins/isodate/README.md                                            |    22 +
+ plugins/isodate/isodate.plugin.zsh                                   |     7 +
+ plugins/istioctl/README.md                                           |     9 +
+ plugins/istioctl/istioctl.plugin.zsh                                 |     4 +
+ plugins/iterm2/iterm2.plugin.zsh                                     |     2 +-
+ plugins/jake-node/jake-node.plugin.zsh                               |     2 +-
+ plugins/jenv/README.md                                               |     2 +-
+ plugins/jenv/jenv.plugin.zsh                                         |    10 +-
+ plugins/jfrog/jfrog.plugin.zsh                                       |     3 +-
+ plugins/jsontools/README.md                                          |    47 +-
+ plugins/jsontools/jsontools.plugin.zsh                               |   137 +-
+ plugins/juju/README.md                                               |   117 +
+ plugins/juju/juju.plugin.zsh                                         |   127 +
+ plugins/kn/README.md                                                 |    17 +
+ plugins/kn/kn.plugin.zsh                                             |     8 +
+ plugins/kubectl/README.md                                            |     3 +-
+ plugins/kubectl/kubectl.plugin.zsh                                   |    42 +-
+ plugins/kubectx/README.md                                            |    26 +
+ plugins/kubectx/kubectx.plugin.zsh                                   |    11 +
+ plugins/kubectx/prod.png                                             |   Bin 0 -> 3834 bytes
+ plugins/kubectx/stage.png                                            |   Bin 0 -> 3829 bytes
+ plugins/lando/lando.plugin.zsh                                       |     1 +
+ plugins/last-working-dir/README.md                                   |    28 +-
+ plugins/last-working-dir/last-working-dir.plugin.zsh                 |    14 +-
+ plugins/lpass/README.md                                              |    13 +
+ plugins/lpass/_lpass                                                 |   169 +
+ plugins/macos/README.md                                              |    63 +
+ plugins/{osx => macos}/_security                                     |     0
+ plugins/macos/macos.plugin.zsh                                       |   268 ++
+ plugins/{osx => macos}/music                                         |     0
+ plugins/{osx => macos}/spotify                                       |     2 +-
+ plugins/macports/README.md                                           |    26 +
+ plugins/macports/_port                                               |     1 +
+ plugins/macports/macports.plugin.zsh                                 |    40 +-
+ plugins/magic-enter/magic-enter.plugin.zsh                           |    53 +-
+ plugins/mercurial/README.md                                          |    43 +-
+ plugins/mercurial/mercurial.plugin.zsh                               |   111 +-
+ plugins/mix/README.md                                                |    16 +-
+ plugins/mix/_mix                                                     |    43 +-
+ plugins/mongocli/README.md                                           |    19 +
+ plugins/mongocli/mongocli.plugin.zsh                                 |     4 +
+ plugins/mvn/mvn.plugin.zsh                                           |   577 ++--
+ plugins/ng/_ng                                                       |    56 +
+ plugins/ng/ng.plugin.zsh                                             |    78 -
+ plugins/npm/README.md                                                |    23 +-
+ plugins/npm/npm.plugin.zsh                                           |    52 +
+ plugins/nvm/README.md                                                |    18 +-
+ plugins/nvm/nvm.plugin.zsh                                           |     4 +-
+ plugins/oc/README.md                                                 |     2 +-
+ plugins/octozen/README.md                                            |    12 +
+ plugins/octozen/octozen.plugin.zsh                                   |    11 +
+ plugins/operator-sdk/README.md                                       |    11 +
+ plugins/operator-sdk/operator-sdk.plugin.zsh                         |     4 +
+ plugins/osx/README.md                                                |    63 +-
+ plugins/osx/osx.plugin.zsh                                           |   242 +-
+ plugins/pass/_pass                                                   |    13 +-
+ plugins/pep8/_pep8                                                   |     2 +-
+ plugins/per-directory-history/per-directory-history.zsh              |    64 +-
+ plugins/percol/README.md                                             |    23 +-
+ plugins/percol/percol.plugin.zsh                                     |    41 +-
+ plugins/pip/README.md                                                |     9 +
+ plugins/pip/_pip                                                     |     2 +-
+ plugins/pip/pip.plugin.zsh                                           |    27 +-
+ plugins/pj/pj.plugin.zsh                                             |    51 +-
+ plugins/please/README.md                                             |     2 +-
+ plugins/pm2/README.md                                                |    19 +
+ plugins/pm2/_pm2                                                     |   168 +
+ plugins/pm2/pm2.plugin.zsh                                           |     6 +
+ plugins/poetry/README.md                                             |     9 +
+ plugins/poetry/poetry.plugin.zsh                                     |    16 +
+ plugins/powify/_powify                                               |     2 +-
+ plugins/pyenv/README.md                                              |    10 +-
+ plugins/pyenv/pyenv.plugin.zsh                                       |   110 +-
+ plugins/python/README.md                                             |    33 +-
+ plugins/python/python.plugin.zsh                                     |    92 +-
+ plugins/rails/README.md                                              |     4 +-
+ plugins/rails/rails.plugin.zsh                                       |     8 +-
+ plugins/rake/README.md                                               |    22 +-
+ plugins/rake/rake.plugin.zsh                                         |    15 +-
+ plugins/rand-quote/rand-quote.plugin.zsh                             |    23 +-
+ plugins/rbenv/rbenv.plugin.zsh                                       |    92 +-
+ plugins/rbfu/README.md                                               |     1 +
+ plugins/rbfu/rbfu.plugin.zsh                                         |    77 +-
+ plugins/rbw/README.md                                                |    12 +
+ plugins/rbw/rbw.plugin.zsh                                           |    19 +
+ plugins/react-native/react-native.plugin.zsh                         |     3 +
+ plugins/rebar/_rebar                                                 |     2 +-
+ plugins/redis-cli/_redis-cli                                         |    10 +-
+ plugins/repo/_repo                                                   |    11 +-
+ plugins/ripgrep/README.md                                            |     4 +-
+ plugins/ripgrep/_ripgrep                                             |    32 +-
+ plugins/ruby/README.md                                               |    29 +-
+ plugins/ruby/ruby.plugin.zsh                                         |    22 +-
+ plugins/rust/README.md                                               |     2 +-
+ plugins/rust/{_rust => _rustc}                                       |     0
+ plugins/rust/rust.plugin.zsh                                         |    31 +
+ plugins/rustup/README.md                                             |     8 +-
+ plugins/rustup/_rustup                                               |  1143 -------
+ plugins/rustup/rustup.plugin.zsh                                     |    15 +
+ plugins/rvm/README.md                                                |    31 +-
+ plugins/rvm/rvm.plugin.zsh                                           |   108 +-
+ plugins/salt/_salt                                                   |     2 +-
+ plugins/samtools/README.md                                           |     5 +
+ plugins/samtools/_samtools                                           |    40 +
+ plugins/scala/_scala                                                 |     2 +-
+ plugins/scd/scd                                                      |     2 +-
+ plugins/screen/screen.plugin.zsh                                     |     4 +-
+ plugins/sfdx/_sfdx                                                   |     2 +-
+ plugins/shell-proxy/README.md                                        |    58 +-
+ plugins/shell-proxy/proxy.py                                         |    26 +-
+ plugins/shell-proxy/shell-proxy.plugin.zsh                           |    37 +-
+ plugins/shell-proxy/ssh-agent.py                                     |     2 +-
+ plugins/shell-proxy/ssh-proxy.py                                     |    21 +-
+ plugins/shrink-path/README.md                                        |    87 +-
+ plugins/shrink-path/shrink-path.plugin.zsh                           |    12 +
+ plugins/sprunge/README.md                                            |     2 +-
+ plugins/ssh-agent/README.md                                          |    72 +-
+ plugins/ssh-agent/ssh-agent.plugin.zsh                               |   163 +-
+ plugins/sublime/sublime.plugin.zsh                                   |     2 +
+ plugins/sudo/README.md                                               |    32 +-
+ plugins/sudo/sudo.plugin.zsh                                         |   105 +-
+ plugins/supervisor/_supervisorctl                                    |    10 +-
+ plugins/supervisor/supervisor.plugin.zsh                             |    15 +-
+ plugins/suse/README.md                                               |    10 +-
+ plugins/suse/suse.plugin.zsh                                         |    20 +-
+ plugins/svn-fast-info/svn-fast-info.plugin.zsh                       |    40 +-
+ plugins/svn/svn.plugin.zsh                                           |   112 +-
+ plugins/symfony2/README.md                                           |     2 +-
+ plugins/symfony2/symfony2.plugin.zsh                                 |     2 +-
+ plugins/systemadmin/README.md                                        |    22 +-
+ plugins/systemadmin/systemadmin.plugin.zsh                           |    21 +-
+ plugins/systemd/README.md                                            |    13 +-
+ plugins/systemd/systemd.plugin.zsh                                   |    60 +-
+ plugins/term_tab/README                                              |    16 +
+ plugins/term_tab/term_tab.plugin.zsh                                 |    41 +
+ plugins/terminitor/_terminitor                                       |     2 +-
+ plugins/terraform/README.md                                          |    45 +-
+ plugins/terraform/_terraform                                         |   228 +-
+ plugins/terraform/terraform.plugin.zsh                               |    20 +-
+ plugins/thefuck/thefuck.plugin.zsh                                   |     3 +-
+ plugins/tmux/README.md                                               |     1 +
+ plugins/tmux/tmux.plugin.zsh                                         |    11 +-
+ plugins/transfer/README.md                                           |    39 +-
+ plugins/transfer/transfer.plugin.zsh                                 |   136 +-
+ plugins/ubuntu/README.md                                             |     3 +-
+ plugins/ubuntu/ubuntu.plugin.zsh                                     |     9 +-
+ plugins/universalarchive/README.md                                   |    46 +
+ plugins/universalarchive/_universalarchive                           |     6 +
+ plugins/universalarchive/universalarchive.plugin.zsh                 |    70 +
+ plugins/vagrant/_vagrant                                             |     2 +-
+ plugins/vault/_vault                                                 |     4 +-
+ plugins/vi-mode/README.md                                            |   107 +-
+ plugins/vi-mode/vi-mode.plugin.zsh                                   |   125 +-
+ plugins/vim-interaction/vim-interaction.plugin.zsh                   |    49 +-
+ plugins/virtualenv/virtualenv.plugin.zsh                             |     2 +-
+ plugins/virtualenvwrapper/virtualenvwrapper.plugin.zsh               |    23 +-
+ plugins/volta/README.md                                              |    11 +
+ plugins/volta/volta.plugin.zsh                                       |    19 +
+ plugins/wd/wd.plugin.zsh                                             |     5 +
+ plugins/wp-cli/README.md                                             |   202 +-
+ plugins/wp-cli/wp-cli.plugin.zsh                                     |    51 +-
+ plugins/xcode/README.md                                              |     2 +-
+ plugins/xcode/xcode.plugin.zsh                                       |    28 +-
+ plugins/yarn/README.md                                               |     1 +
+ plugins/yarn/_yarn                                                   |   245 +-
+ plugins/yarn/yarn.plugin.zsh                                         |    11 +
+ plugins/yum/yum.plugin.zsh                                           |     2 +-
+ plugins/z/z.plugin.zsh                                               |     5 +
+ plugins/z/z.sh                                                       |    16 +-
+ plugins/zbell/README.md                                              |    33 +
+ plugins/zbell/zbell.plugin.zsh                                       |    96 +
+ plugins/zoxide/README.md                                             |    14 +
+ plugins/zoxide/zoxide.plugin.zsh                                     |     5 +
+ plugins/zsh-navigation-tools/.config/znt/README.txt                  |     1 -
+ plugins/zsh-navigation-tools/README.md                               |   206 +-
+ plugins/zsh-navigation-tools/doc/generate_single_file                |    35 +
+ plugins/zsh-navigation-tools/doc/img/n-history2.png                  |   Bin 0 -> 108316 bytes
+ plugins/zsh-navigation-tools/doc/install.sh                          |    70 +
+ plugins/zsh-navigation-tools/doc/n-preview                           |   224 ++
+ plugins/zsh-navigation-tools/{ => doc}/znt-tmux.zsh                  |     2 +-
+ plugins/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh         |     3 +-
+ plugins/zsh_reload/README.md                                         |    22 +-
+ plugins/zsh_reload/zsh_reload.plugin.zsh                             |    25 +-
+ templates/zshrc.zsh-template                                         |    14 +-
+ themes/Soliah.zsh-theme                                              |     4 +-
+ themes/adben.zsh-theme                                               |   148 +-
+ themes/af-magic.zsh-theme                                            |    63 +-
+ themes/afowler.zsh-theme                                             |    14 +-
+ themes/agnoster.zsh-theme                                            |    19 +-
+ themes/aussiegeek.zsh-theme                                          |     2 +-
+ themes/avit.zsh-theme                                                |     4 +-
+ themes/bira.zsh-theme                                                |    28 +-
+ themes/bureau.zsh-theme                                              |    68 +-
+ themes/candy-kingdom.zsh-theme                                       |     4 +-
+ themes/dallas.zsh-theme                                              |     2 +-
+ themes/dieter.zsh-theme                                              |     2 +-
+ themes/dogenpunk.zsh-theme                                           |     4 +-
+ themes/emotty.zsh-theme                                              |     6 +-
+ themes/essembeh.zsh-theme                                            |    60 +-
+ themes/fino-time.zsh-theme                                           |     5 +-
+ themes/fino.zsh-theme                                                |     4 +-
+ themes/flazz.zsh-theme                                               |     2 +-
+ themes/gallois.zsh-theme                                             |    15 +-
+ themes/gentoo.zsh-theme                                              |    30 +-
+ themes/half-life.zsh-theme                                           |    99 +-
+ themes/jonathan.zsh-theme                                            |   261 +-
+ themes/josh.zsh-theme                                                |     4 +-
+ themes/minimal.zsh-theme                                             |    32 +-
+ themes/mlh.zsh-theme                                                 |    90 +-
+ themes/murilasso.zsh-theme                                           |     2 +-
+ themes/nicoulaj.zsh-theme                                            |     2 +-
+ themes/obraun.zsh-theme                                              |     5 +-
+ themes/pygmalion-virtualenv.zsh-theme                                |    11 +-
+ themes/pygmalion.zsh-theme                                           |     6 +-
+ themes/random.zsh-theme                                              |     2 +-
+ themes/re5et.zsh-theme                                               |     2 +-
+ themes/refined.zsh-theme                                             |     5 +-
+ themes/simonoff.zsh-theme                                            |   187 +-
+ themes/smt.zsh-theme                                                 |     2 +-
+ themes/sunrise.zsh-theme                                             |     2 +-
+ themes/trapd00r.zsh-theme                                            |     2 +
+ themes/wedisagree.zsh-theme                                          |     4 +-
+ themes/ys.zsh-theme                                                  |    28 +-
+ tools/changelog.sh                                                   |   470 +++
+ tools/check_for_upgrade.sh                                           |   194 +-
+ tools/install.sh                                                     |   285 +-
+ tools/theme_chooser.sh                                               |     1 +
+ tools/uninstall.sh                                                   |    16 +-
+ tools/upgrade.sh                                                     |   255 +-
+ 426 files changed, 50353 insertions(+), 10192 deletions(-)
+ delete mode 100644 .github/ISSUE_TEMPLATE/bug_report.md
+ create mode 100644 .github/ISSUE_TEMPLATE/bug_report.yml
+ create mode 100644 .github/ISSUE_TEMPLATE/bug_report_omz.yml
+ delete mode 100644 .github/ISSUE_TEMPLATE/feature_request.md
+ create mode 100644 .github/ISSUE_TEMPLATE/feature_request.yml
+ delete mode 100644 .github/ISSUE_TEMPLATE/support.md
+ create mode 100644 .github/actions/spelling/README.md
+ create mode 100644 .github/actions/spelling/advice.md
+ create mode 100644 .github/actions/spelling/allow.txt
+ create mode 100644 .github/actions/spelling/excludes.txt
+ create mode 100644 .github/actions/spelling/expect.txt
+ create mode 100644 .github/actions/spelling/patterns.txt
+ create mode 100644 .github/actions/spelling/reject.txt
+ create mode 100644 .github/workflows/project.yml
+ create mode 100644 SECURITY.md
+ create mode 100644 plugins/ag/README.md
+ create mode 100644 plugins/ag/_ag
+ create mode 100644 plugins/aliases/.gitignore
+ create mode 100644 plugins/aliases/README.md
+ create mode 100644 plugins/aliases/aliases.plugin.zsh
+ create mode 100644 plugins/aliases/cheatsheet.py
+ create mode 100644 plugins/aliases/termcolor.py
+ create mode 100644 plugins/ant/_ant
+ create mode 100644 plugins/bedtools/README.md
+ create mode 100644 plugins/bedtools/_bedtools
+ delete mode 100644 plugins/cargo/_cargo
+ create mode 100644 plugins/cargo/cargo.plugin.zsh
+ delete mode 100644 plugins/cloudapp/README.md
+ delete mode 100644 plugins/cloudapp/cloudapp.plugin.zsh
+ create mode 100644 plugins/colemak/.gitignore
+ create mode 100755 plugins/colored-man-pages/nroff
+ create mode 100644 plugins/deno/README.md
+ create mode 100644 plugins/deno/deno.plugin.zsh
+ create mode 100644 plugins/ember-cli/_ember-cli
+ create mode 100644 plugins/emoji/gemoji_db.json
+ delete mode 100644 plugins/emoji/update_emoji.pl
+ create mode 100644 plugins/emoji/update_emoji.py
+ delete mode 100644 plugins/fedora/README.md
+ delete mode 100644 plugins/fedora/fedora.plugin.zsh
+ create mode 100644 plugins/fig/README.md
+ create mode 100644 plugins/fig/fig.plugin.zsh
+ create mode 100644 plugins/fnm/README.md
+ create mode 100644 plugins/fnm/fnm.plugin.zsh
+ create mode 100644 plugins/fossil/_fossil
+ rename plugins/frontend-search/{_frontend-search.sh => _frontend} (100%)
+ create mode 100644 plugins/genpass/README.md
+ create mode 100755 plugins/genpass/genpass-apple
+ create mode 100755 plugins/genpass/genpass-monkey
+ create mode 100755 plugins/genpass/genpass-xkcd
+ create mode 100644 plugins/genpass/genpass.plugin.zsh
+ create mode 100644 plugins/gh/README.md
+ create mode 100644 plugins/gh/gh.plugin.zsh
+ create mode 100644 plugins/git-flow/_git-flow
+ delete mode 100644 plugins/go/README.md
+ delete mode 100644 plugins/go/go.plugin.zsh
+ create mode 100644 plugins/golang/_golang
+ create mode 100644 plugins/grc/README.md
+ create mode 100644 plugins/grc/grc.plugin.zsh
+ create mode 100644 plugins/hitchhiker/.gitignore
+ create mode 100644 plugins/hitchhiker/README.md
+ create mode 100644 plugins/hitchhiker/fortunes/hitchhiker
+ create mode 100644 plugins/hitchhiker/hitchhiker.plugin.zsh
+ create mode 100644 plugins/invoke/README.md
+ create mode 100644 plugins/invoke/invoke.plugin.zsh
+ create mode 100644 plugins/isodate/README.md
+ create mode 100644 plugins/isodate/isodate.plugin.zsh
+ create mode 100644 plugins/istioctl/README.md
+ create mode 100644 plugins/istioctl/istioctl.plugin.zsh
+ create mode 100644 plugins/juju/README.md
+ create mode 100644 plugins/juju/juju.plugin.zsh
+ create mode 100644 plugins/kn/README.md
+ create mode 100644 plugins/kn/kn.plugin.zsh
+ create mode 100644 plugins/kubectx/README.md
+ create mode 100644 plugins/kubectx/kubectx.plugin.zsh
+ create mode 100644 plugins/kubectx/prod.png
+ create mode 100644 plugins/kubectx/stage.png
+ create mode 100644 plugins/lpass/README.md
+ create mode 100644 plugins/lpass/_lpass
+ create mode 100644 plugins/macos/README.md
+ rename plugins/{osx => macos}/_security (100%)
+ create mode 100644 plugins/macos/macos.plugin.zsh
+ rename plugins/{osx => macos}/music (100%)
+ rename plugins/{osx => macos}/spotify (99%)
+ create mode 100644 plugins/mongocli/README.md
+ create mode 100644 plugins/mongocli/mongocli.plugin.zsh
+ create mode 100644 plugins/ng/_ng
+ delete mode 100644 plugins/ng/ng.plugin.zsh
+ create mode 100644 plugins/octozen/README.md
+ create mode 100644 plugins/octozen/octozen.plugin.zsh
+ create mode 100644 plugins/operator-sdk/README.md
+ create mode 100644 plugins/operator-sdk/operator-sdk.plugin.zsh
+ create mode 100644 plugins/pm2/README.md
+ create mode 100644 plugins/pm2/_pm2
+ create mode 100644 plugins/pm2/pm2.plugin.zsh
+ create mode 100644 plugins/poetry/README.md
+ create mode 100644 plugins/poetry/poetry.plugin.zsh
+ create mode 100644 plugins/rbw/README.md
+ create mode 100644 plugins/rbw/rbw.plugin.zsh
+ rename plugins/rust/{_rust => _rustc} (100%)
+ create mode 100644 plugins/rust/rust.plugin.zsh
+ delete mode 100644 plugins/rustup/_rustup
+ create mode 100644 plugins/rustup/rustup.plugin.zsh
+ create mode 100644 plugins/samtools/README.md
+ create mode 100644 plugins/samtools/_samtools
+ create mode 100644 plugins/term_tab/README
+ create mode 100644 plugins/term_tab/term_tab.plugin.zsh
+ create mode 100644 plugins/universalarchive/README.md
+ create mode 100644 plugins/universalarchive/_universalarchive
+ create mode 100644 plugins/universalarchive/universalarchive.plugin.zsh
+ create mode 100644 plugins/volta/README.md
+ create mode 100644 plugins/volta/volta.plugin.zsh
+ create mode 100644 plugins/zbell/README.md
+ create mode 100644 plugins/zbell/zbell.plugin.zsh
+ create mode 100644 plugins/zoxide/README.md
+ create mode 100644 plugins/zoxide/zoxide.plugin.zsh
+ delete mode 100644 plugins/zsh-navigation-tools/.config/znt/README.txt
+ create mode 100755 plugins/zsh-navigation-tools/doc/generate_single_file
+ create mode 100644 plugins/zsh-navigation-tools/doc/img/n-history2.png
+ create mode 100755 plugins/zsh-navigation-tools/doc/install.sh
+ create mode 100644 plugins/zsh-navigation-tools/doc/n-preview
+ rename plugins/zsh-navigation-tools/{ => doc}/znt-tmux.zsh (97%)
+ create mode 100755 tools/changelog.sh
+ mode change 100644 => 100755 tools/upgrade.sh
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to 0b08b70b0cc7ff286ea942f0e20a41f10bef0ee8.
+         __                                     __   
+  ____  / /_     ____ ___  __  __   ____  _____/ /_  
+ / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \ 
+/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / / 
+\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/  
+                        /____/                       
+Hooray! Oh My Zsh has been updated and/or is at the current version.
+To keep up on the latest news and updates, follow us on Twitter: https://twitter.com/ohmyzsh
+Want to get involved in the community? Join our Discord: https://discord.gg/ohmyzsh
+Get your Oh My Zsh swag at: https://shop.planetargon.com/collections/oh-my-zsh
+➜  gftadmin add-apt-repository pp:git-core/ppa
+Error: 'pp:git-core/ppa' invalid
+➜  gftadmin sudo add-apt-repository pp:git-core/ppa
+Error: 'pp:git-core/ppa' invalid
+➜  gftadmin exit
+gftadmin@ubuntu:~$ sudo add-apt-repository pp:git-core/ppa
+Error: 'pp:git-core/ppa' invalid
+gftadmin@ubuntu:~$ apt-get update
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+gftadmin@ubuntu:~$ sudo apt-get update
+Hit:1 https://download.docker.com/linux/ubuntu bionic InRelease
+Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]                                                                                                                                
+Ign:3 https://pkg.jenkins.io/debian-stable binary/ InRelease                                                                                                                                               
+Hit:4 https://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                                     
+Hit:5 http://us.archive.ubuntu.com/ubuntu bionic InRelease                                                                                                                
+Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]                                                                                              
+Hit:8 https://download.sublimetext.com apt/stable/ InRelease                                                                                             
+Get:9 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/main i386 Packages [1,096 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [1,402 kB]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2,026 kB]          
+Get:13 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [2,372 kB]         
+Get:14 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [360 kB]            
+Get:15 http://security.ubuntu.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [52.9 kB] 
+Get:16 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [572 kB]       
+Get:17 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [77.5 kB] 
+Get:18 http://security.ubuntu.com/ubuntu bionic-security/universe i386 Packages [1,004 kB]           
+Get:19 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1,165 kB]
+Get:20 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [268 kB]    
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [59.1 kB]     
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 48x48 Icons [26.9 kB]      
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 64x64 Icons [138 kB]  
+Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [453 kB]        
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Get:26 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [294 kB]          
+Get:27 http://us.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [596 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [81.3 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [1,595 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1,780 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [385 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [300 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [228 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [506 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:36 http://us.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [9,276 B]
+Fetched 17.1 MB in 6s (2,958 kB/s)                                
+Reading package lists... Done
+gftadmin@ubuntu:~$ apt-get install git
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+gftadmin@ubuntu:~$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.17.1-1ubuntu0.9).
+git set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+gftadmin@ubuntu:~$ git -version
+unknown option: -version
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+gftadmin@ubuntu:~$ git -,version
+unknown option: -,version
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+gftadmin@ubuntu:~$ git --version
+git version 2.17.1
+gftadmin@ubuntu:~$ sudo apt-get upgrade 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  chromium-codecs-ffmpeg-extra
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+1 standard security update
+Need to get 1,142 kB of archives.
+After this operation, 17.4 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 chromium-codecs-ffmpeg-extra amd64 97.0.4692.71-0ubuntu0.18.04.1 [1,142 kB]
+Fetched 1,142 kB in 1s (1,240 kB/s)                     
+(Reading database ... 208338 files and directories currently installed.)
+Preparing to unpack .../chromium-codecs-ffmpeg-extra_97.0.4692.71-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking chromium-codecs-ffmpeg-extra (97.0.4692.71-0ubuntu0.18.04.1) over (95.0.4638.69-0ubuntu0.18.04.1) ...
+Setting up chromium-codecs-ffmpeg-extra (97.0.4692.71-0ubuntu0.18.04.1) ...
+gftadmin@ubuntu:~$ sudo add-apt-repository ppa:git-core/ppa
+ The most current stable version of Git for Ubuntu.
+
+For release candidates, go to https://launchpad.net/~git-core/+archive/candidate .
+ More info: https://launchpad.net/~git-core/+archive/ubuntu/ppa
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:2 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic InRelease [20.8 kB]                                                                                                                              
+Ign:3 https://pkg.jenkins.io/debian-stable binary/ InRelease                                                                                                                                               
+Hit:4 https://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                                                 
+Hit:5 https://download.docker.com/linux/ubuntu bionic InRelease                                                                                                                                            
+Hit:6 http://us.archive.ubuntu.com/ubuntu bionic InRelease                                                                                                                                          
+Hit:7 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease                                         
+Hit:8 https://download.sublimetext.com apt/stable/ InRelease                                               
+Hit:9 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease                                       
+Get:11 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic/main amd64 Packages [4,188 B]
+Get:12 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic/main i386 Packages [4,188 B]               
+Get:13 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic/main Translation-en [2,252 B]
+Fetched 120 kB in 2s (78.6 kB/s)                                              
+Reading package lists... Done
+gftadmin@ubuntu:~$ sudo apt-get update 
+Hit:1 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic InRelease
+Hit:2 https://download.docker.com/linux/ubuntu bionic InRelease                                                                                                                                            
+Ign:3 https://pkg.jenkins.io/debian-stable binary/ InRelease                                                                                                                                               
+Hit:4 https://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                                                 
+Hit:5 http://us.archive.ubuntu.com/ubuntu bionic InRelease                                                                                                                                    
+Hit:6 http://security.ubuntu.com/ubuntu bionic-security InRelease                                                                                             
+Hit:7 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease                                         
+Hit:8 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease                                       
+Hit:9 https://download.sublimetext.com apt/stable/ InRelease                                               
+Reading package lists... Done                      
+gftadmin@ubuntu:~$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  git-man libpcre2-8-0
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  libpcre2-8-0
+The following packages will be upgraded:
+  git git-man
+2 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7,790 kB of archives.
+After this operation, 6,681 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic/main amd64 git amd64 1:2.34.1-0ppa1~ubuntu18.04.1 [5,710 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libpcre2-8-0 amd64 10.31-2 [179 kB]
+Get:3 http://ppa.launchpad.net/git-core/ppa/ubuntu bionic/main amd64 git-man all 1:2.34.1-0ppa1~ubuntu18.04.1 [1,901 kB]
+Fetched 7,790 kB in 1s (6,860 kB/s)                                   
+(Reading database ... 208338 files and directories currently installed.)
+Preparing to unpack .../git_1%3a2.34.1-0ppa1~ubuntu18.04.1_amd64.deb ...
+Unpacking git (1:2.34.1-0ppa1~ubuntu18.04.1) over (1:2.17.1-1ubuntu0.9) ...
+Preparing to unpack .../git-man_1%3a2.34.1-0ppa1~ubuntu18.04.1_all.deb ...
+Unpacking git-man (1:2.34.1-0ppa1~ubuntu18.04.1) over (1:2.17.1-1ubuntu0.9) ...
+Selecting previously unselected package libpcre2-8-0:amd64.
+Preparing to unpack .../libpcre2-8-0_10.31-2_amd64.deb ...
+Unpacking libpcre2-8-0:amd64 (10.31-2) ...
+Setting up git-man (1:2.34.1-0ppa1~ubuntu18.04.1) ...
+Setting up libpcre2-8-0:amd64 (10.31-2) ...
+Setting up git (1:2.34.1-0ppa1~ubuntu18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+gftadmin@ubuntu:~$ git --version
+git version 2.34.1
+gftadmin@ubuntu:~$ source setup.sh
+bash: setup.sh: No such file or directory
+gftadmin@ubuntu:~$ ls
+Desktop  Documents  Downloads  git-katas  linux-agent-installer.sh  Music  optimize.sh  Pictures  portainer  Public  snap  Templates  tsclient  Videos
+gftadmin@ubuntu:~$ cd $HOME
+gftadmin@ubuntu:~$ ls
+Desktop  Documents  Downloads  git-katas  linux-agent-installer.sh  Music  optimize.sh  Pictures  portainer  Public  snap  Templates  tsclient  Videos
+gftadmin@ubuntu:~$ cd git-katas/
+gftadmin@ubuntu:~/git-katas$ ls
+3-way-merge                  basic-cherry-pick  bisect                    docs            investigation          objects        rebase-interactive-autosquash  SHELL-BASICS.md  test.sh
+advanced-rebase-interactive  basic-cleaning     change-author             ff-merge        LICENSE.txt            Overview.md    reorder-the-history            squashing        testzsh.sh
+alias                        basic-commits      commit-on-wrong-branch    git-attributes  master-based-workflow  pre-push       reset                          submodules       utils
+amend                        basic-revert       commit-on-wrong-branch-2  git-tag         merge-conflict         README.md      restore                        subtree
+bad-commit                   basic-staging      configure-git             ignore          merge-driver           rebase-branch  reverted-merge                 test-all.sh
+basic-branching              basic-stashing     detached-head             images          merge-mergesort        rebase-exec    save-my-commit                 test.ps1
+gftadmin@ubuntu:~/git-katas$ source setup.sh
+bash: setup.sh: No such file or directory
+gftadmin@ubuntu:~/git-katas$ source setup.sh
+bash: setup.sh: No such file or directory
+gftadmin@ubuntu:~/git-katas$ ls basic-staging/
+README.md  setup.ps1  setup.sh
+gftadmin@ubuntu:~/git-katas$ cd basic-staging/
+gftadmin@ubuntu:~/git-katas/basic-staging$ source setup.sh
+Initialized empty Git repository in /home/gftadmin/git-katas/basic-staging/exercise/.git/
+Successfully configured local username and email
+Successfully disable local GPG signing
+[master (root-commit) 78f3550] 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+Successfully unset local username and email
+Successfully unset local GPG signing
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ ls
+file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ nano file.txt 
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+1
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ echo 2 > file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+2
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff
+diff --git a/file.txt b/file.txt
+index d00491f..0cfbf08 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++2
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff --stage
+error: invalid option: --stage
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff --staged
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git add file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff --staged
+diff --git a/file.txt b/file.txt
+index d00491f..0cfbf08 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++2
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ echo 3 > file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff
+diff --git a/file.txt b/file.txt
+index 0cfbf08..00750ed 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-2
++3
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff --staged
+diff --git a/file.txt b/file.txt
+index d00491f..0cfbf08 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++2
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   file.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file.txt
+
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git restore --staged file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff
+diff --git a/file.txt b/file.txt
+index d00491f..00750ed 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++3
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git add file.txt 
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ more file.txt 
+3
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git didd
+git: 'didd' is not a git command. See 'git --help'.
+
+The most similar command is
+	diff
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git diff
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git commit -m "file.txt modified to 3"
+[master f942ed6] file.txt modified to 3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git log
+commit f942ed6bacde85578e768937bf69151743a77262 (HEAD -> master)
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 19:27:52 2022 +0100
+
+    file.txt modified to 3
+
+commit 78f3550b5dabf679d735978d78b22e836d403d42
+Author: git-katas trainer bot <git-katas@example.com>
+Date:   Wed Jan 19 19:12:20 2022 +0100
+
+    1
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ echo 4 > file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+4
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git reset file.txt
+Unstaged changes after reset:
+M	file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+4
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git status 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git log
+commit f942ed6bacde85578e768937bf69151743a77262 (HEAD -> master)
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 19:27:52 2022 +0100
+
+    file.txt modified to 3
+
+commit 78f3550b5dabf679d735978d78b22e836d403d42
+Author: git-katas trainer bot <git-katas@example.com>
+Date:   Wed Jan 19 19:12:20 2022 +0100
+
+    1
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+4
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git reset file.txt
+Unstaged changes after reset:
+M	file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+4
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ git restore file.txt
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cat file.txt 
+3
+gftadmin@ubuntu:~/git-katas/basic-staging/exercise$ cd $HOME
+gftadmin@ubuntu:~$ ls
+Desktop  Documents  Downloads  git-katas  linux-agent-installer.sh  Music  optimize.sh  Pictures  portainer  Public  snap  Templates  tsclient  Videos
+gftadmin@ubuntu:~$ cd git-katas/
+gftadmin@ubuntu:~/git-katas$ ls
+3-way-merge                  basic-cherry-pick  bisect                    docs            investigation          objects        rebase-interactive-autosquash  SHELL-BASICS.md  test.sh
+advanced-rebase-interactive  basic-cleaning     change-author             ff-merge        LICENSE.txt            Overview.md    reorder-the-history            squashing        testzsh.sh
+alias                        basic-commits      commit-on-wrong-branch    git-attributes  master-based-workflow  pre-push       reset                          submodules       utils
+amend                        basic-revert       commit-on-wrong-branch-2  git-tag         merge-conflict         README.md      restore                        subtree
+bad-commit                   basic-staging      configure-git             ignore          merge-driver           rebase-branch  reverted-merge                 test-all.sh
+basic-branching              basic-stashing     detached-head             images          merge-mergesort        rebase-exec    save-my-commit                 test.ps1
+gftadmin@ubuntu:~/git-katas$ cd investigation/
+gftadmin@ubuntu:~/git-katas/investigation$ ls -la
+total 20
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 .
+drwxrwxr-x 47 gftadmin gftadmin 4096 Jan 19 10:36 ..
+-rw-rw-r--  1 gftadmin gftadmin  680 Jan 19 10:36 README.md
+-rw-rw-r--  1 gftadmin gftadmin  576 Jan 19 10:36 setup.ps1
+-rwxrwxr-x  1 gftadmin gftadmin  433 Jan 19 10:36 setup.sh
+gftadmin@ubuntu:~/git-katas/investigation$ cd ..
+gftadmin@ubuntu:~/git-katas$ ls -la
+total 236
+drwxrwxr-x 47 gftadmin gftadmin 4096 Jan 19 10:36 .
+drwxr-xr-x 28 gftadmin gftadmin 4096 Jan 19 11:47 ..
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 3-way-merge
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 advanced-rebase-interactive
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 alias
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 amend
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 bad-commit
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-branching
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-cherry-pick
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-cleaning
+drwxrwxr-x  3 gftadmin gftadmin 4096 Jan 19 11:52 basic-commits
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-revert
+drwxrwxr-x  3 gftadmin gftadmin 4096 Jan 19 19:12 basic-staging
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-stashing
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 bisect
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 change-author
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 commit-on-wrong-branch
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 commit-on-wrong-branch-2
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 configure-git
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 detached-head
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 docs
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 ff-merge
+drwxrwxr-x  8 gftadmin gftadmin 4096 Jan 19 10:36 .git
+-rw-rw-r--  1 gftadmin gftadmin   19 Jan 19 10:36 .gitattributes
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 git-attributes
+drwxrwxr-x  3 gftadmin gftadmin 4096 Jan 19 10:36 .github
+-rw-rw-r--  1 gftadmin gftadmin   46 Jan 19 10:36 .gitignore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 git-tag
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 ignore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 images
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 investigation
+-rw-rw-r--  1 gftadmin gftadmin 1063 Jan 19 10:36 LICENSE.txt
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 master-based-workflow
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-conflict
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-driver
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-mergesort
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 objects
+-rw-rw-r--  1 gftadmin gftadmin 3951 Jan 19 10:36 Overview.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 pre-push
+-rw-rw-r--  1 gftadmin gftadmin 8333 Jan 19 10:36 README.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-branch
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-exec
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-interactive-autosquash
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reorder-the-history
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reset
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 restore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reverted-merge
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 save-my-commit
+-rw-rw-r--  1 gftadmin gftadmin 1055 Jan 19 10:36 SHELL-BASICS.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 squashing
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 submodules
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 subtree
+-rwxrwxr-x  1 gftadmin gftadmin 1084 Jan 19 10:36 test-all.sh
+-rw-rw-r--  1 gftadmin gftadmin  246 Jan 19 10:36 test.ps1
+-rwxrwxr-x  1 gftadmin gftadmin   76 Jan 19 10:36 test.sh
+-rwxrwxr-x  1 gftadmin gftadmin   57 Jan 19 10:36 testzsh.sh
+drwxrwxr-x  4 gftadmin gftadmin 4096 Jan 19 10:36 utils
+gftadmin@ubuntu:~/git-katas$ cat .git/objects/
+cat: .git/objects/: Is a directory
+gftadmin@ubuntu:~/git-katas$ cd .git/objects/
+gftadmin@ubuntu:~/git-katas/.git/objects$ ls
+info  pack
+gftadmin@ubuntu:~/git-katas/.git/objects$ ls -la
+total 16
+drwxrwxr-x 4 gftadmin gftadmin 4096 Jan 19 10:36 .
+drwxrwxr-x 8 gftadmin gftadmin 4096 Jan 19 10:36 ..
+drwxrwxr-x 2 gftadmin gftadmin 4096 Jan 19 10:36 info
+drwxrwxr-x 2 gftadmin gftadmin 4096 Jan 19 10:36 pack
+gftadmin@ubuntu:~/git-katas/.git/objects$ cd $HOME/
+gftadmin@ubuntu:~$ cd git-katas/
+gftadmin@ubuntu:~/git-katas$ cd investigation/
+gftadmin@ubuntu:~/git-katas/investigation$ source setup.sh
+Initialized empty Git repository in /home/gftadmin/git-katas/investigation/exercise/.git/
+[master (root-commit) 4b10529] add test.md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.md
+[master 5d3533d] Add folders
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/file.c
+ create mode 100644 src/main/main.h
+[master 27faf87] Put data in main.h
+ 1 file changed, 1 insertion(+)
+[master cda80b0] Fill test.md
+ 1 file changed, 1 insertion(+)
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree
+usage: git ls-tree [<options>] <tree-ish> [<path>...]
+
+    -d                    only show trees
+    -r                    recurse into subtrees
+    -t                    show trees when recursing
+    -z                    terminate entries with NUL byte
+    -l, --long            include object size
+    --name-only           list only filenames
+    --name-status         list only filenames
+    --full-name           use full path names
+    --full-tree           list entire tree; not just current directory (implies --full-name)
+    --abbrev[=<n>]        use <n> digits to display object names
+
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree
+usage: git ls-tree [<options>] <tree-ish> [<path>...]
+
+    -d                    only show trees
+    -r                    recurse into subtrees
+    -t                    show trees when recursing
+    -z                    terminate entries with NUL byte
+    -l, --long            include object size
+    --name-only           list only filenames
+    --name-status         list only filenames
+    --full-name           use full path names
+    --full-tree           list entire tree; not just current directory (implies --full-name)
+    --abbrev[=<n>]        use <n> digits to display object names
+
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree --full-tree
+usage: git ls-tree [<options>] <tree-ish> [<path>...]
+
+    -d                    only show trees
+    -r                    recurse into subtrees
+    -t                    show trees when recursing
+    -z                    terminate entries with NUL byte
+    -l, --long            include object size
+    --name-only           list only filenames
+    --name-status         list only filenames
+    --full-name           use full path names
+    --full-tree           list entire tree; not just current directory (implies --full-name)
+    --abbrev[=<n>]        use <n> digits to display object names
+
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree --full-tree ..
+fatal: Not a valid object name ..
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree d
+fatal: Not a valid object name d
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree -d
+usage: git ls-tree [<options>] <tree-ish> [<path>...]
+
+    -d                    only show trees
+    -r                    recurse into subtrees
+    -t                    show trees when recursing
+    -z                    terminate entries with NUL byte
+    -l, --long            include object size
+    --name-only           list only filenames
+    --name-status         list only filenames
+    --full-name           use full path names
+    --full-tree           list entire tree; not just current directory (implies --full-name)
+    --abbrev[=<n>]        use <n> digits to display object names
+
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree --help
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree --help
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree -r HEAD:sub dir
+fatal: Not a valid object name HEAD:sub
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git status
+On branch master
+nothing to commit, working tree clean
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git log
+commit cda80b0d5f107ad9948327d123e49c9f39e6fce6 (HEAD -> master)
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 19:42:17 2022 +0100
+
+    Fill test.md
+
+commit 27faf87bc6044dea7e596b2faaeb9e59e411a2a6
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 19:42:17 2022 +0100
+
+    Put data in main.h
+
+commit 5d3533dc1edf574698b7826a0fe45205235883be
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 19:42:17 2022 +0100
+
+    Add folders
+
+commit 4b105290d89e90310d5e413c9fdedecdc10a9d81
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 19:42:17 2022 +0100
+
+    add test.md
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree -r HEAD:master dir
+fatal: Not a valid object name HEAD:master
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree -r HEAD
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	src/file.c
+100644 blob 49f2298b586912944c24349543c47f077f633f25	src/main/main.h
+100644 blob 3e01ae02c5a70d3a92fada56dc20457a6e4deb52	test.md
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git cat-file
+usage: git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e | -p | <type> | --textconv | --filters) [--path=<path>] <object>
+   or: git cat-file (--batch[=<format>] | --batch-check[=<format>]) [--follow-symlinks] [--textconv | --filters]
+
+<type> can be one of: blob, tree, commit, tag
+    -t                    show object type
+    -s                    show object size
+    -e                    exit with zero when there's no error
+    -p                    pretty-print object's content
+    --textconv            for blob objects, run textconv on object's content
+    --filters             for blob objects, run filters on object's content
+    --path <blob>         use a specific path for --textconv/--filters
+    --allow-unknown-type  allow -s and -t to work with broken/corrupt objects
+    --buffer              buffer --batch output
+    --batch[=<format>]    show info and content of objects fed from the standard input
+    --batch-check[=<format>]
+                          show info about objects fed from the standard input
+    --follow-symlinks     follow in-tree symlinks (used with --batch or --batch-check)
+    --batch-all-objects   show all objects with --batch or --batch-check
+    --unordered           do not order --batch-all-objects output
+
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git cat-file -t
+usage: git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e | -p | <type> | --textconv | --filters) [--path=<path>] <object>
+   or: git cat-file (--batch[=<format>] | --batch-check[=<format>]) [--follow-symlinks] [--textconv | --filters]
+
+<type> can be one of: blob, tree, commit, tag
+    -t                    show object type
+    -s                    show object size
+    -e                    exit with zero when there's no error
+    -p                    pretty-print object's content
+    --textconv            for blob objects, run textconv on object's content
+    --filters             for blob objects, run filters on object's content
+    --path <blob>         use a specific path for --textconv/--filters
+    --allow-unknown-type  allow -s and -t to work with broken/corrupt objects
+    --buffer              buffer --batch output
+    --batch[=<format>]    show info and content of objects fed from the standard input
+    --batch-check[=<format>]
+                          show info about objects fed from the standard input
+    --follow-symlinks     follow in-tree symlinks (used with --batch or --batch-check)
+    --batch-all-objects   show all objects with --batch or --batch-check
+    --unordered           do not order --batch-all-objects output
+
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ pwd
+/home/gftadmin/git-katas/investigation/exercise
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ ls /home/gftadmin/git-katas/.git/objects/
+info  pack
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ ls /home/gftadmin/git-katas/.git/objects/fc
+ls: cannot access '/home/gftadmin/git-katas/.git/objects/fc': No such file or directory
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree -r HEAD
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	src/file.c
+100644 blob 49f2298b586912944c24349543c47f077f633f25	src/main/main.h
+100644 blob 3e01ae02c5a70d3a92fada56dc20457a6e4deb52	test.md
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree --help
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree master
+040000 tree 68ebdecef990e7a93b49666c59e237f7b961403a	src
+100644 blob 3e01ae02c5a70d3a92fada56dc20457a6e4deb52	test.md
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ git ls-tree -r HEAD
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	src/file.c
+100644 blob 49f2298b586912944c24349543c47f077f633f25	src/main/main.h
+100644 blob 3e01ae02c5a70d3a92fada56dc20457a6e4deb52	test.md
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ cd ,,
+bash: cd: ,,: No such file or directory
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ cd ..
+gftadmin@ubuntu:~/git-katas/investigation$ cd ..
+gftadmin@ubuntu:~/git-katas$ cd basic-branching/
+gftadmin@ubuntu:~/git-katas/basic-branching$ source setup.sh
+Initialized empty Git repository in /home/gftadmin/git-katas/basic-branching/exercise/.git/
+Successfully configured local username and email
+Successfully disable local GPG signing
+[master (root-commit) e0c43df] dummy commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dummy.txt
+Switched to a new branch 'second-branch'
+Switched to branch 'master'
+Successfully unset local username and email
+Successfully unset local GPG signing
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git branch
+* master
+  second-branch
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git branch mybranch
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git branch
+* master
+  mybranch
+  second-branch
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git switch mybranch
+Switched to branch 'mybranch'
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git branch
+  master
+* mybranch
+  second-branch
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git status
+On branch mybranch
+nothing to commit, working tree clean
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git branch master 
+fatal: A branch named 'master' already exists.
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git switch master
+Switched to branch 'master'
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git status
+On branch master
+nothing to commit, working tree clean
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git switch mybrach
+fatal: invalid reference: mybrach
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git switch mybranch
+Switched to branch 'mybranch'
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git status
+On branch mybranch
+nothing to commit, working tree clean
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ touch file1.txt
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git add file1.txt 
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git branch
+  master
+* mybranch
+  second-branch
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git commit -m "file1 added to my branch"
+[mybranch 1fc10a0] file1 added to my branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git log --oneline --graph
+* 1fc10a0 (HEAD -> mybranch) file1 added to my branch
+* e0c43df (second-branch, master) dummy commit
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git switch master
+Switched to branch 'master'
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git log --oneline --graph
+* e0c43df (HEAD -> master, second-branch) dummy commit
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ touch file2.txt
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git add file2.txt 
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git commit -m "file2 added to master branch"
+[master c83deb9] file2 added to master branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git log --oneline --graph --all
+* c83deb9 (HEAD -> master) file2 added to master branch
+| * 1fc10a0 (mybranch) file1 added to my branch
+|/  
+* e0c43df (second-branch) dummy commit
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git switch mybranch
+Switched to branch 'mybranch'
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ ls
+dummy.txt  file1.txt
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ git diff mybranch master
+diff --git a/file1.txt b/file2.txt
+similarity index 100%
+rename from file1.txt
+rename to file2.txt
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ 
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ ls $HOME
+Desktop  Documents  Downloads  git-katas  linux-agent-installer.sh  Music  optimize.sh  Pictures  portainer  Public  snap  Templates  tsclient  Videos
+gftadmin@ubuntu:~/git-katas/basic-branching/exercise$ cd $HOME/git-katas
+gftadmin@ubuntu:~/git-katas$ ls
+3-way-merge                  basic-cherry-pick  bisect                    docs            investigation          objects        rebase-interactive-autosquash  SHELL-BASICS.md  test.sh
+advanced-rebase-interactive  basic-cleaning     change-author             ff-merge        LICENSE.txt            Overview.md    reorder-the-history            squashing        testzsh.sh
+alias                        basic-commits      commit-on-wrong-branch    git-attributes  master-based-workflow  pre-push       reset                          submodules       utils
+amend                        basic-revert       commit-on-wrong-branch-2  git-tag         merge-conflict         README.md      restore                        subtree
+bad-commit                   basic-staging      configure-git             ignore          merge-driver           rebase-branch  reverted-merge                 test-all.sh
+basic-branching              basic-stashing     detached-head             images          merge-mergesort        rebase-exec    save-my-commit                 test.ps1
+gftadmin@ubuntu:~/git-katas$ cd $HOME
+gftadmin@ubuntu:~$ git clone git@github.com:grveGFT/pagina-web.git
+Cloning into 'pagina-web'...
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,140.82.121.3' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (40/40), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 40 (delta 1), reused 36 (delta 0), pack-reused 0
+Receiving objects: 100% (40/40), 123.65 KiB | 467.00 KiB/s, done.
+Resolving deltas: 100% (1/1), done.
+gftadmin@ubuntu:~$ cd pagina-web/
+gftadmin@ubuntu:~/pagina-web$ cat .git/config 
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:grveGFT/pagina-web.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+gftadmin@ubuntu:~/pagina-web$ vi index.html 
+gftadmin@ubuntu:~/pagina-web$ nano index.html
+gftadmin@ubuntu:~/pagina-web$ ls -la
+total 420
+drwxrwxr-x  7 gftadmin gftadmin   4096 Jan 20 10:03 .
+drwxr-xr-x 29 gftadmin gftadmin   4096 Jan 20 10:02 ..
+-rw-rw-r--  1 gftadmin gftadmin   1054 Jan 20 10:00 404.html
+-rw-rw-r--  1 gftadmin gftadmin    381 Jan 20 10:00 browserconfig.xml
+drwxrwxr-x  2 gftadmin gftadmin   4096 Jan 20 10:00 css
+drwxrwxr-x  2 gftadmin gftadmin   4096 Jan 20 10:00 doc
+-rw-rw-r--  1 gftadmin gftadmin    150 Jan 20 10:00 .editorconfig
+-rw-rw-r--  1 gftadmin gftadmin    766 Jan 20 10:00 favicon.ico
+drwxrwxr-x  8 gftadmin gftadmin   4096 Jan 20 10:00 .git
+-rw-rw-r--  1 gftadmin gftadmin   3249 Jan 20 10:00 .gitattributes
+-rw-rw-r--  1 gftadmin gftadmin    228 Jan 20 10:00 .gitignore
+-rw-rw-r--  1 gftadmin gftadmin  50504 Jan 20 10:00 .htaccess
+-rw-rw-r--  1 gftadmin gftadmin    229 Jan 20 10:00 humans.txt
+-rw-rw-r--  1 gftadmin gftadmin   4029 Jan 20 10:00 icon.png
+drwxrwxr-x  2 gftadmin gftadmin   4096 Jan 20 10:00 img
+-rw-rw-r--  1 gftadmin gftadmin   1313 Jan 20 10:00 index.html
+drwxrwxr-x  3 gftadmin gftadmin   4096 Jan 20 10:00 js
+-rw-rw-r--  1 gftadmin gftadmin   1056 Jan 20 10:00 LICENSE.txt
+-rw-rw-r--  1 gftadmin gftadmin    374 Jan 20 10:00 package.json
+-rw-rw-r--  1 gftadmin gftadmin 279378 Jan 20 10:00 package-lock.json
+-rw-rw-r--  1 gftadmin gftadmin    125 Jan 20 10:00 README.md
+-rw-rw-r--  1 gftadmin gftadmin     78 Jan 20 10:00 robots.txt
+-rw-rw-r--  1 gftadmin gftadmin    231 Jan 20 10:00 site.webmanifest
+-rw-rw-r--  1 gftadmin gftadmin   3482 Jan 20 10:00 tile.png
+-rw-rw-r--  1 gftadmin gftadmin   1854 Jan 20 10:00 tile-wide.png
+gftadmin@ubuntu:~/pagina-web$ firefox index.html 
+gftadmin@ubuntu:~/pagina-web$ nano index.html 
+gftadmin@ubuntu:~/pagina-web$ firefox index.html
+gftadmin@ubuntu:~/pagina-web$ 
+

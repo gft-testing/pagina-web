@@ -1,0 +1,752 @@
+gftadmin@ubuntu:~$ pid
+
+Command 'pid' not found, but there are 23 similar ones.
+
+gftadmin@ubuntu:~$ man pid
+No manual entry for pid
+gftadmin@ubuntu:~$ top c
+
+top - 08:57:26 up 3 days, 11:35,  1 user,  load average: 0.13, 0.07, 0.01
+Tasks: 306 total,   1 running, 237 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.2 us,  1.2 sy,  0.0 ni, 95.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 16402108 total, 10844456 free,  4076632 used,  1481020 buff/cache
+KiB Swap:        0 total,        0 free,        0 used. 11909452 avail Mem 
+
+   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                                                                
+ 57101 vmwblast  20   0  825604 115652  38308 S   2.6  0.7   1:10.50 /usr/lib/vmware/viewagent/VMwareBlastServer/VMwareBlastServer -m 42077 -r --sslCipherServerPreference -v -b 22443 -u vmwblast -c -s R+ 
+  2923 root      20   0  675444   9220   8104 S   1.7  0.1  70:20.33 /usr/lib/vmware/viewagent/VMwareBlastServer/BlastServer                                                                                
+ 57448 gftadmin  20   0 3636072 414496 120184 S   1.3  2.5   1:13.83 /usr/bin/gnome-shell                                                                                                                   
+  3196 root      20   0 1003596 206804 106316 S   0.7  1.3   0:11.89 /usr/lib/xorg/Xorg :100 -auth /var/vmware/viewagent/xauth/.xauth:100 -once -query 127.0.0.1 -config /usr/lib/vmware/viewagent/resourc+ 
+ 57474 gftadmin  20   0 1253708  14836  12548 S   0.7  0.1   6:05.77 /usr/bin/pulseaudio --start --log-target=syslog                                                                                        
+ 73780 gftadmin  20   0   42096   4004   3108 R   0.7  0.0   0:00.06 top c                                                                                                                                  
+   666 root       0 -20  228440   7748   6512 S   0.3  0.0   4:19.23 /usr/bin/vmtoolsd                                                                                                                      
+  2421 jenkins   20   0 6934004 2.173g  30460 S   0.3 13.9  11:06.14 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/jenkins/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8123            
+ 58072 gftadmin  20   0  795544  38224  28500 S   0.3  0.2   0:01.33 /usr/lib/gnome-terminal/gnome-terminal-server                                                                                          
+     1 root      20   0  160144   9260   6552 S   0.0  0.1   0:12.83 /sbin/init splash                                                                                                                      
+     2 root      20   0       0      0      0 S   0.0  0.0   0:00.04 [kthreadd]                                                                                                                             
+     4 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [kworker/0:0H]                                                                                                                         
+     6 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [mm_percpu_wq]                                                                                                                         
+     7 root      20   0       0      0      0 S   0.0  0.0   0:06.86 [ksoftirqd/0]                                                                                                                          
+     8 root      20   0       0      0      0 I   0.0  0.0   0:12.70 [rcu_sched]                                                                                                                            
+     9 root      20   0       0      0      0 I   0.0  0.0   0:00.00 [rcu_bh]                                                                                                                               
+    10 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 [migration/0]                                                                                                                          
+    11 root      rt   0       0      0      0 S   0.0  0.0   0:00.43 [watchdog/0]                                                                                                                           
+    12 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [cpuhp/0]                                                                                                                              
+    13 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [cpuhp/1]                                                                                                                              
+    14 root      rt   0       0      0      0 S   0.0  0.0   0:00.44 [watchdog/1]                                                                                                                           
+    15 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 [migration/1]                                                                                                                          
+    16 root      20   0       0      0      0 S   0.0  0.0   0:08.72 [ksoftirqd/1]                                                                                                                          
+    18 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [kworker/1:0H]                                                                                                                         
+    19 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [kdevtmpfs]                                                                                                                            
+    20 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [netns]                                                                                                                                
+    21 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [rcu_tasks_kthre]                                                                                                                      
+    22 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [kauditd]                                                                                                                              
+    24 root      20   0       0      0      0 S   0.0  0.0   0:00.27 [khungtaskd]                                                                                                                           
+    25 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [oom_reaper]                                                                                                                           
+    26 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [writeback]                                                                                                                            
+    27 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [kcompactd0]                                                                                                                           
+    28 root      25   5       0      0      0 S   0.0  0.0   0:00.00 [ksmd]                                                                                                                                 
+    29 root      39  19       0      0      0 S   0.0  0.0   0:00.00 [khugepaged]                                                                                                                           
+    30 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [crypto]                                                                                                                               
+    31 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [kintegrityd]                                                                                                                          
+    32 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [kblockd]                                                                                                                              
+    33 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [ata_sff]                                                                                                                              
+    34 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [md]                                                                                                                                   
+    35 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [edac-poller]                                                                                                                          
+    36 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [devfreq_wq]                                                                                                                           
+    37 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [watchdogd]                                                                                                                            
+    41 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [kswapd0]                                                                                                                              
+    42 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [kworker/u257:0]                                                                                                                       
+    43 root      20   0       0      0      0 S   0.0  0.0   0:00.00 [ecryptfs-kthrea]                                                                                                                      
+    85 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [kthrotld]                                                                                                                             
+    86 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 [acpi_thermal_pm]                                                                                                                      
+    87 root      20   0       0      0      0 S   0.0  0.0   0:00.01 [scsi_eh_0]                                                                                                                            
+gftadmin@ubuntu:~$ xeps
+
+Command 'xeps' not found, did you mean:
+
+  command 'xep' from deb pvm-examples
+  command 'xgps' from deb gpsd-clients
+
+Try: sudo apt install <deb name>
+
+gftadmin@ubuntu:~$ man top
+gftadmin@ubuntu:~$ 
+gftadmin@ubuntu:~$ pwd
+/home/gftadmin
+gftadmin@ubuntu:~$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+gftadmin@ubuntu:~$ git help tutorial
+gftadmin@ubuntu:~$ git help clone
+gftadmin@ubuntu:~$ git clone https://github.com/eficode-academy/git-katas.git
+Cloning into 'git-katas'...
+remote: Enumerating objects: 2342, done.
+remote: Counting objects: 100% (164/164), done.
+remote: Compressing objects: 100% (119/119), done.
+remote: Total 2342 (delta 61), reused 113 (delta 41), pack-reused 2178
+Receiving objects: 100% (2342/2342), 618.06 KiB | 2.37 MiB/s, done.
+Resolving deltas: 100% (969/969), done.
+gftadmin@ubuntu:~$ ls -l
+total 72
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Desktop
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Documents
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov  1 23:26 Downloads
+drwxrwxr-x 47 gftadmin gftadmin  4096 Jan 19 10:36 git-katas
+-rwxrw-r--  1 gftadmin gftadmin  4438 Mar 10  2020 linux-agent-installer.sh
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Music
+-rwxr--r--  1 root     root     20000 Mar 10  2020 optimize.sh
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Pictures
+drwxrwxr-x  2 gftadmin gftadmin  4096 Nov  1 23:31 portainer
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Public
+drwx------  3 gftadmin gftadmin  4096 Oct 27 21:25 snap
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Templates
+drwxr-xr-x  0 root     root         0 Jan  1  1970 tsclient
+drwxr-xr-x  2 gftadmin gftadmin  4096 Nov 12  2020 Videos
+gftadmin@ubuntu:~$ cd git-katas/
+gftadmin@ubuntu:~/git-katas$ ls -la
+total 236
+drwxrwxr-x 47 gftadmin gftadmin 4096 Jan 19 10:36 .
+drwxr-xr-x 28 gftadmin gftadmin 4096 Jan 19 10:36 ..
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 3-way-merge
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 advanced-rebase-interactive
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 alias
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 amend
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 bad-commit
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-branching
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-cherry-pick
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-cleaning
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-commits
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-revert
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-staging
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-stashing
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 bisect
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 change-author
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 commit-on-wrong-branch
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 commit-on-wrong-branch-2
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 configure-git
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 detached-head
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 docs
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 ff-merge
+drwxrwxr-x  8 gftadmin gftadmin 4096 Jan 19 10:36 .git
+-rw-rw-r--  1 gftadmin gftadmin   19 Jan 19 10:36 .gitattributes
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 git-attributes
+drwxrwxr-x  3 gftadmin gftadmin 4096 Jan 19 10:36 .github
+-rw-rw-r--  1 gftadmin gftadmin   46 Jan 19 10:36 .gitignore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 git-tag
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 ignore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 images
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 investigation
+-rw-rw-r--  1 gftadmin gftadmin 1063 Jan 19 10:36 LICENSE.txt
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 master-based-workflow
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-conflict
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-driver
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-mergesort
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 objects
+-rw-rw-r--  1 gftadmin gftadmin 3951 Jan 19 10:36 Overview.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 pre-push
+-rw-rw-r--  1 gftadmin gftadmin 8333 Jan 19 10:36 README.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-branch
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-exec
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-interactive-autosquash
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reorder-the-history
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reset
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 restore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reverted-merge
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 save-my-commit
+-rw-rw-r--  1 gftadmin gftadmin 1055 Jan 19 10:36 SHELL-BASICS.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 squashing
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 submodules
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 subtree
+-rwxrwxr-x  1 gftadmin gftadmin 1084 Jan 19 10:36 test-all.sh
+-rw-rw-r--  1 gftadmin gftadmin  246 Jan 19 10:36 test.ps1
+-rwxrwxr-x  1 gftadmin gftadmin   76 Jan 19 10:36 test.sh
+-rwxrwxr-x  1 gftadmin gftadmin   57 Jan 19 10:36 testzsh.sh
+drwxrwxr-x  4 gftadmin gftadmin 4096 Jan 19 10:36 utils
+gftadmin@ubuntu:~/git-katas$ cat README.md 
+---
+maintainer: randomsort
+---
+# Git Katas
+
+## Quick Start
+
+### In the Cloud
+
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/praqma-training/git-katas.git)
+
+### On Your Local Machine
+
+![Quick Start](/images/quickstart.gif)
+
+- Clone this repository
+- Go into the folder you want to solve an exercise in
+- Run the `setup.sh` script
+- Consult the README.md in that folder to get a description of the exercise
+
+## Purpose of Git Katas
+
+This repository is a collection of Git exercises.
+The concept is stolen without shame from [Schauderhaft.de](http://blog.schauderhaft.de/gitkata/).
+Unfortunately, they have not maintained the system - and we need more good Git exercises.
+
+The exercises are designed for use when we are teaching Git courses. You should be able to use them as self-contained exercises that will allow you to keep your Git skills sharp.
+
+Exercises starting with _basic_ are entry-level - other exercises vary greatly in difficulty.
+
+To get an overview of the exercises in here look in [Overview.md](Overview.md).
+
+Feel free to use these exercises, that's why they're public!
+
+## Suggested Learning Path
+
+If you are coming to this repository for some basic Git knowledge, we recommend going through the exercises in the following order.
+This is the order that Jan Krag at Praqma teaches Git and might change over time. There are more exercises than this, but these should take you through
+everything you need to be able to use Git effectively in your day to day life.
+
+- [Basic Commits](./basic-commits/README.md)
+- [Basic Staging](./basic-staging/README.md)
+- [Investigation](./investigation/README.md)
+- [Basic Branching](./basic-branching/README.md)
+- [Fast Forward Merge](./ff-merge/README.md)
+- [3 way Merge](./3-way-merge/README.md)
+- [Merge Mergesort](./merge-mergesort/README.md)
+- [Rebase Branch](./rebase-branch/README.md)
+- [Basic Revert](./basic-revert/README.md)
+- [Reset](./reset/README.md)
+- [Basic Cleaning](./basic-cleaning/README.md)
+- [Amend](./amend/README.md)
+- [Reorder the History](./reorder-the-history/README.md)
+- [Advanced Rebase Interactive](./advanced-rebase-interactive/README.md)
+- [Rebase using autosquash](./rebase-interactive-autosquash/README.md)
+- [Basic Stashing](./basic-stashing/README.md)
+
+See [Overview.md](Overview.md) for a more complete list and suggested order.
+
+## Contributing
+
+If you miss exercises or find errors in any of them, feel free to improve them and make a pull request.
+
+You can also make an issue so we notice an opportunity to improve!
+
+Thank you!
+
+## Cheatsheet
+
+A collection of useful commands to use throughout the exercises:
+
+```shell
+# Initializing an empty git repository.
+git init            # Initialize an empty git repository under current directory.
+
+# Cloning a repository
+git clone https://github.com/praqma-training/git-katas.git      # Clone this repository to your current working directory
+
+# Git (user and repo level) configurations
+git config --local user.name "Repo-level Username"          # For setting a local git repo level user name.
+git config --local user.email "Repo-level.Email@Example.com" # For setting a local git repo level user email.
+                                                            # --global -> User level git config stored in <user-home>/.gitconfig for e.g. ~/.gitconfig
+                                                            # --local -> repo level config stored in repo's main dir under .git/config
+
+
+# See local changes
+git status                  # Show the working tree status
+git diff                    # Show changes current working directory (not yet staged)
+git diff --cached           # Show changes currently staged for commit
+
+# Add files to staging (before a commit)
+git add myfile.txt          # Add myfile.txt to stage
+git add .                   # Add entire working directory to stage
+
+# Make a commit
+git commit                              # Make a new commit with the changes in your staging area. This will open an editor for a commit message.
+git commit -m "I love documentation"    # Make a new commit with a commit message from the command line
+git commit -a                           # Make a new commit and automatically "add" changes from all known files
+git commit -am "I still do!"            # A combination of the above
+git commit --amend                      # Re-do the commit message of the previous commit (don't do this after pushing!)
+                                        #   We _never_ change "public history"
+git reset <file>                        # Unstage a staged file leaving in working directory without losing any changes.
+git reset --soft [commit_hash]          # resets the current branch to <commit>. Does not touch the staging area or the working tree at all.
+                                        # --hard mode would discard all changes.
+
+# Configuring a different editor
+## Avoid Vim but stay in terminal:
+- `git config --global core.editor nano`
+
+## For Windows:
+- Use Notepad:
+`git config --global core.editor notepad`
+
+- or for instance Notepad++:
+`git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
+
+
+# See history
+git log             # Show commit logs
+git log --oneline   # Formats commits to a single line (shorthand for --pretty=oneline  --abbrev-commit )
+git log --graph     # Show a graph commits and branches
+git log --pretty=fuller     # To see commit log details with author and committer details, if any different.
+git log --follow <file>     # List the history of a file beyond renames
+git log branch2..branch1    # Show commits reachable from branch1 but not from branch2
+
+# Deferring
+git stash                               # Stash (store temporarily) changes in working branch and enable checkingout a new branch
+git stash list                          # List stored stashes.
+git stash apply <stash>                 # Apply given <stash>, or if none given the latest from stash list.
+
+
+# Working with Branches
+git branch my-branch       # Create a new branch called my-branch
+git switch my-branch     # Switch to a different branch to work on it
+git switch -c my-branch  # Create a new branch called my-branch AND switch to it
+git branch -d my-branch    # Delete branch my-branch that has been merged with master
+git branch -D my-branch    # Forcefully delete a branch my-branch that hasn't been merged to master
+
+# Merging
+git merge master         # Merge the master branch into your currently checked out branch.
+git rebase master        # Rebase current branch on top of master branch
+
+# Working with Remotes
+git remote              # Show your current remotes
+git remote -v           # Show your current remotes and their URLs
+git push                # Publish your commits to the upstream master of your currently checked out branch
+git push -u origin my-branch  # Push newly created branch to remote repo setting up to track remote branch from origin.
+                              # No need to specify remote branch name, for e.g., when doing a 'git pull' on that branch.
+git pull                # Pull changes from the remote to your currently checked out branch
+
+# Re/moving files under version control
+git rm <path/to/the/file>                 # remove file and stage the change to be committed.
+git mv <source/file> <destination/file>   # move/rename file and stage the change to be committed.
+
+# Aliases - it's possible to make aliases of frequently used commands
+#   This is often done to make a command shorter, or to add default flags
+
+# Adding a shorthand "sw" for "switch"
+git config --global alias.sw "switch"
+# Usage:
+git sw master     # Does a "git switch master"
+
+## Logging
+git log --graph --oneline --all # Show a nice graph of the previous commits
+## Adding an alias called "lol" (log oneline..) that shows the above
+git config --global alias.lol "log --graph --oneline --all"
+## Using the alias
+git lol     # Does a "git log --graph --oneline --all"
+```
+
+## Testing
+
+There is a very small test that you can run in powershell or bash.
+It is contained in the scripts `test.sh` and `test.ps1`.
+
+### Cleanup
+
+You can remove testing artifacts, `exercise` directories, with the git clean command:
+
+```sh
+git clean -ffdX
+```
+gftadmin@ubuntu:~/git-katas$ 
+gftadmin@ubuntu:~/git-katas$ 
+gftadmin@ubuntu:~/git-katas$ ls .la
+ls: cannot access '.la': No such file or directory
+gftadmin@ubuntu:~/git-katas$ ls -la
+total 236
+drwxrwxr-x 47 gftadmin gftadmin 4096 Jan 19 10:36 .
+drwxr-xr-x 28 gftadmin gftadmin 4096 Jan 19 10:36 ..
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 3-way-merge
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 advanced-rebase-interactive
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 alias
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 amend
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 bad-commit
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-branching
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-cherry-pick
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-cleaning
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-commits
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-revert
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-staging
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 basic-stashing
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 bisect
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 change-author
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 commit-on-wrong-branch
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 commit-on-wrong-branch-2
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 configure-git
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 detached-head
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 docs
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 ff-merge
+drwxrwxr-x  8 gftadmin gftadmin 4096 Jan 19 10:36 .git
+-rw-rw-r--  1 gftadmin gftadmin   19 Jan 19 10:36 .gitattributes
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 git-attributes
+drwxrwxr-x  3 gftadmin gftadmin 4096 Jan 19 10:36 .github
+-rw-rw-r--  1 gftadmin gftadmin   46 Jan 19 10:36 .gitignore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 git-tag
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 ignore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 images
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 investigation
+-rw-rw-r--  1 gftadmin gftadmin 1063 Jan 19 10:36 LICENSE.txt
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 master-based-workflow
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-conflict
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-driver
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 merge-mergesort
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 objects
+-rw-rw-r--  1 gftadmin gftadmin 3951 Jan 19 10:36 Overview.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 pre-push
+-rw-rw-r--  1 gftadmin gftadmin 8333 Jan 19 10:36 README.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-branch
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-exec
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 rebase-interactive-autosquash
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reorder-the-history
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reset
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 restore
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 reverted-merge
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 save-my-commit
+-rw-rw-r--  1 gftadmin gftadmin 1055 Jan 19 10:36 SHELL-BASICS.md
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 squashing
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 submodules
+drwxrwxr-x  2 gftadmin gftadmin 4096 Jan 19 10:36 subtree
+-rwxrwxr-x  1 gftadmin gftadmin 1084 Jan 19 10:36 test-all.sh
+-rw-rw-r--  1 gftadmin gftadmin  246 Jan 19 10:36 test.ps1
+-rwxrwxr-x  1 gftadmin gftadmin   76 Jan 19 10:36 test.sh
+-rwxrwxr-x  1 gftadmin gftadmin   57 Jan 19 10:36 testzsh.sh
+drwxrwxr-x  4 gftadmin gftadmin 4096 Jan 19 10:36 utils
+gftadmin@ubuntu:~/git-katas$ ls .git
+branches  config  description  HEAD  hooks  index  info  logs  objects  packed-refs  refs
+gftadmin@ubuntu:~/git-katas$ tree .git
+.git
+├── branches
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   └── update.sample
+├── index
+├── info
+│   └── exclude
+├── logs
+│   ├── HEAD
+│   └── refs
+│       ├── heads
+│       │   └── master
+│       └── remotes
+│           └── origin
+│               └── HEAD
+├── objects
+│   ├── info
+│   └── pack
+│       ├── pack-aaa953b1914da9246e2344e38d93a281a4fb6060.idx
+│       └── pack-aaa953b1914da9246e2344e38d93a281a4fb6060.pack
+├── packed-refs
+└── refs
+    ├── heads
+    │   └── master
+    ├── remotes
+    │   └── origin
+    │       └── HEAD
+    └── tags
+
+16 directories, 24 files
+gftadmin@ubuntu:~/git-katas$ cat .git/config 
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/eficode-academy/git-katas.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+gftadmin@ubuntu:~/git-katas$ cat .gitignore 
+git_attributes
+*~
+*.swp
+**/exercise
+**/remote
+gftadmin@ubuntu:~/git-katas$ cat .gitattributes 
+* text=auto eol=lf
+gftadmin@ubuntu:~/git-katas$ git config --global user.name "Gaudir Valle"
+gftadmin@ubuntu:~/git-katas$ git config --global user.email "grve@gft.com"
+gftadmin@ubuntu:~/git-katas$ ls $HOME
+Desktop  Documents  Downloads  git-katas  linux-agent-installer.sh  Music  optimize.sh  Pictures  portainer  Public  snap  Templates  tsclient  Videos
+gftadmin@ubuntu:~/git-katas$ ls -a $HOME
+.          .bash_history  .cache   Desktop    Downloads   git-katas  .ICEauthority             .mozilla     Pictures   Public  .sudo_as_admin_successful  Videos  .vnc        .xinputrc
+..         .bash_logout   .config  .docker    .gconf      .gnupg     linux-agent-installer.sh  Music        portainer  snap    Templates                  .vim    .vscode
+.aptitude  .bashrc        .dbus    Documents  .gitconfig  .gvfs      .local                    optimize.sh  .profile   .ssh    tsclient                   .vimrc  .wget-hsts
+gftadmin@ubuntu:~/git-katas$ cat /home/gftadmin/git-katas/git-config
+cat: /home/gftadmin/git-katas/git-config: No such file or directory
+gftadmin@ubuntu:~/git-katas$ cat /home/gftadmin/git-katas/.git-config
+cat: /home/gftadmin/git-katas/.git-config: No such file or directory
+gftadmin@ubuntu:~/git-katas$ cat /home/gftadmin/.gitconfig 
+[user]
+	name = Gaudir Valle
+	email = grve@gft.com
+gftadmin@ubuntu:~/git-katas$ git config --gelp
+error: unknown option `gelp'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+gftadmin@ubuntu:~/git-katas$ git config --help
+gftadmin@ubuntu:~/git-katas$ git config --global core.editor nano
+gftadmin@ubuntu:~/git-katas$ source setup.sh
+bash: setup.sh: No such file or directory
+gftadmin@ubuntu:~/git-katas$ pwd
+/home/gftadmin/git-katas
+gftadmin@ubuntu:~/git-katas$ cd basic-commits/
+gftadmin@ubuntu:~/git-katas/basic-commits$ source setup.sh 
+README.md  setup.ps1  setup.sh   
+gftadmin@ubuntu:~/git-katas/basic-commits$ source setup.sh 
+README.md  setup.ps1  setup.sh   
+gftadmin@ubuntu:~/git-katas/basic-commits$ source setup.sh
+Initialized empty Git repository in /home/gftadmin/git-katas/basic-commits/exercise/.git/
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log
+fatal: your current branch 'master' does not have any commits yet
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log --help
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log
+fatal: your current branch 'master' does not have any commits yet
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ touch prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ ls -l
+total 0
+-rw-rw-r-- 1 gftadmin gftadmin 0 Jan 19 11:57 prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ date >> prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ more prueba.txt 
+Wed Jan 19 11:59:47 CET 2022
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ ls -l
+total 4
+-rw-rw-r-- 1 gftadmin gftadmin 29 Jan 19 11:59 prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	prueba.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git add prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   prueba.txt
+
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git c
+checkout      cherry        cherry-pick   clean         clone         commit        config        
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git commit --help
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git commit --help
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git commit 
+[master (root-commit) a749d36] Commit inicial del fichero prueba.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status
+On branch master
+nothing to commit, working tree clean
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ nano prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ date >> prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ cat prueba.txt 
+Wed Jan 19 11:59:47 CET 2022
+Wed Jan 19 12:26:07 CET 2022
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   prueba.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git diff
+diff --git a/prueba.txt b/prueba.txt
+index ec2b8f5..f25c6d2 100644
+--- a/prueba.txt
++++ b/prueba.txt
+@@ -1 +1,2 @@
+ Wed Jan 19 11:59:47 CET 2022
++Wed Jan 19 12:26:07 CET 2022
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git add prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   prueba.txt
+
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ date >> prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git commit 
+[master 32b8eab] Agregue una linea a prueba.txt
+ 1 file changed, 1 insertion(+)
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   prueba.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git diff
+diff --git a/prueba.txt b/prueba.txt
+index f25c6d2..dee876d 100644
+--- a/prueba.txt
++++ b/prueba.txt
+@@ -1,2 +1,3 @@
+ Wed Jan 19 11:59:47 CET 2022
+ Wed Jan 19 12:26:07 CET 2022
++Wed Jan 19 12:31:43 CET 2022
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log
+commit 32b8eabc6003a738b9573c21437357179634fd14 (HEAD -> master)
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 12:31:54 2022 +0100
+
+    Agregue una linea a prueba.txt
+
+commit a749d36387e8928176e9ac6063c725646beeeda8
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 12:12:37 2022 +0100
+
+    Commit inicial del fichero prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git add prueba.txt 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git commit -m "Agregue una tercera linea a prueba.txt"
+[master 97c662d] Agregue una tercera linea a prueba.txt
+ 1 file changed, 1 insertion(+)
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log
+commit 97c662d1868f83a0fb779ce949f30948124cc988 (HEAD -> master)
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 12:42:09 2022 +0100
+
+    Agregue una tercera linea a prueba.txt
+
+commit 32b8eabc6003a738b9573c21437357179634fd14
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 12:31:54 2022 +0100
+
+    Agregue una linea a prueba.txt
+
+commit a749d36387e8928176e9ac6063c725646beeeda8
+Author: Gaudir Valle <grve@gft.com>
+Date:   Wed Jan 19 12:12:37 2022 +0100
+
+    Commit inicial del fichero prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log --oneline
+97c662d (HEAD -> master) Agregue una tercera linea a prueba.txt
+32b8eab Agregue una linea a prueba.txt
+a749d36 Commit inicial del fichero prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ git log --oneline --graph
+* 97c662d (HEAD -> master) Agregue una tercera linea a prueba.txt
+* 32b8eab Agregue una linea a prueba.txt
+* a749d36 Commit inicial del fichero prueba.txt
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ 
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ pwd
+/home/gftadmin/git-katas/basic-commits/exercise
+gftadmin@ubuntu:~/git-katas/basic-commits/exercise$ cd ../../investigation/
+gftadmin@ubuntu:~/git-katas/investigation$ ls
+exercise  README.md  setup.ps1  setup.sh
+gftadmin@ubuntu:~/git-katas/investigation$ cat .git/config
+cat: .git/config: No such file or directory
+gftadmin@ubuntu:~/git-katas/investigation$ cd exercise/
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+gftadmin@ubuntu:~/git-katas/investigation/exercise$ 
+

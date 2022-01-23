@@ -1,0 +1,612 @@
+gftadmin@ubuntu:~$ docker
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/gftadmin/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/gftadmin/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/gftadmin/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/gftadmin/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  app*        Docker App (Docker Inc., v0.9.1-beta3)
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.7.1-docker)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  scan*       Docker Scan (Docker Inc., v0.12.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+gftadmin@ubuntu:~$ docker container 
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+gftadmin@ubuntu:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+dbccd8171bb2   ubuntu    "bash"    51 seconds ago   Up 49 seconds             dazzling_chatelet
+gftadmin@ubuntu:~$ docker container top
+"docker container top" requires at least 1 argument.
+See 'docker container top --help'.
+
+Usage:  docker container top CONTAINER [ps OPTIONS]
+
+Display the running processes of a container
+gftadmin@ubuntu:~$ docker container top dbccd8171bb2
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                25705               25679               0                   13:11               pts/0               00:00:00            bash
+gftadmin@ubuntu:~$ docker container inspect
+"docker container inspect" requires at least 1 argument.
+See 'docker container inspect --help'.
+
+Usage:  docker container inspect [OPTIONS] CONTAINER [CONTAINER...]
+
+Display detailed information on one or more containers
+gftadmin@ubuntu:~$ docker container inspect dbccd8171bb2
+[
+    {
+        "Id": "dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe",
+        "Created": "2022-01-21T12:11:56.56951861Z",
+        "Path": "bash",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 25705,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-01-21T12:11:57.195372548Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:d13c942271d66cb0954c3ba93e143cd253421fe0772b8bed32c4c0077a546d4d",
+        "ResolvConfPath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/hostname",
+        "HostsPath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/hosts",
+        "LogPath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe-json.log",
+        "Name": "/dazzling_chatelet",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": true,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104-init/diff:/var/lib/docker/overlay2/32dcfa2968559ef18a3fbe6a2904703bf541d13e6d16cc91bd74f07afc3afd72/diff",
+                "MergedDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104/merged",
+                "UpperDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104/diff",
+                "WorkDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "dbccd8171bb2",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "bash"
+            ],
+            "Image": "ubuntu",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "34baa6955aae63dbc9ecb88622e4ef69024dc5024a868239d85d13b9a4264bfb",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/34baa6955aae",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "65be638347249a8b45403be7c4a2f90de89e28caf3cf4d57f32b824face4877b",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "f7ac0a498e84bcacf90e6f436e1b7bd24f8bb23cc69939df3e6e48f99f9a8bf4",
+                    "EndpointID": "65be638347249a8b45403be7c4a2f90de89e28caf3cf4d57f32b824face4877b",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+gftadmin@ubuntu:~$ docker image ls
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+ubuntu        latest    d13c942271d6   2 weeks ago    72.8MB
+hello-world   latest    feb5d9fea6a5   3 months ago   13.3kB
+centos        latest    5d0da3dc9764   4 months ago   231MB
+gftadmin@ubuntu:~$ docker image
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+gftadmin@ubuntu:~$ docker image history ubuntu:latest 
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+d13c942271d6   2 weeks ago   /bin/sh -c #(nop)  CMD ["bash"]                 0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop) ADD file:122ad323412c2e70b…   72.8MB    
+gftadmin@ubuntu:~$ docker image history ubuntu
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+d13c942271d6   2 weeks ago   /bin/sh -c #(nop)  CMD ["bash"]                 0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop) ADD file:122ad323412c2e70b…   72.8MB    
+gftadmin@ubuntu:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+dbccd8171bb2   ubuntu    "bash"    36 minutes ago   Up 36 minutes             dazzling_chatelet
+gftadmin@ubuntu:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+dbccd8171bb2   ubuntu    "bash"    36 minutes ago   Up 36 minutes             dazzling_chatelet
+gftadmin@ubuntu:~$ docker inspect dbccd8171bb2
+[
+    {
+        "Id": "dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe",
+        "Created": "2022-01-21T12:11:56.56951861Z",
+        "Path": "bash",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 25705,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-01-21T12:11:57.195372548Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:d13c942271d66cb0954c3ba93e143cd253421fe0772b8bed32c4c0077a546d4d",
+        "ResolvConfPath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/hostname",
+        "HostsPath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/hosts",
+        "LogPath": "/var/lib/docker/containers/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe/dbccd8171bb2ca95ad0925feab1120ce790a1ac2f5661ff654ee862198fe4ebe-json.log",
+        "Name": "/dazzling_chatelet",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": true,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104-init/diff:/var/lib/docker/overlay2/32dcfa2968559ef18a3fbe6a2904703bf541d13e6d16cc91bd74f07afc3afd72/diff",
+                "MergedDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104/merged",
+                "UpperDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104/diff",
+                "WorkDir": "/var/lib/docker/overlay2/3bb5e8f7f48b334f2b4f4b48339b0939e18a607b9b923aab14f6260e59795104/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "dbccd8171bb2",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "bash"
+            ],
+            "Image": "ubuntu",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "34baa6955aae63dbc9ecb88622e4ef69024dc5024a868239d85d13b9a4264bfb",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/34baa6955aae",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "65be638347249a8b45403be7c4a2f90de89e28caf3cf4d57f32b824face4877b",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "f7ac0a498e84bcacf90e6f436e1b7bd24f8bb23cc69939df3e6e48f99f9a8bf4",
+                    "EndpointID": "65be638347249a8b45403be7c4a2f90de89e28caf3cf4d57f32b824face4877b",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+gftadmin@ubuntu:~$ curl http://172.17.0.2/
+curl: (7) Failed to connect to 172.17.0.2 port 80: Connection refused
+gftadmin@ubuntu:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                               NAMES
+44c9a945a121   nginx     "/docker-entrypoint.…"   2 minutes ago    Up 2 minutes    0.0.0.0:80->80/tcp, :::80->80/tcp   some-nginx
+dbccd8171bb2   ubuntu    "bash"                   48 minutes ago   Up 48 minutes                                       dazzling_chatelet
+gftadmin@ubuntu:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                               NAMES
+44c9a945a121   nginx     "/docker-entrypoint.…"   50 minutes ago   Up 50 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp   some-nginx
+dbccd8171bb2   ubuntu    "bash"                   2 hours ago      Up 2 hours                                          dazzling_chatelet
+gftadmin@ubuntu:~$ curl http://172.17.0.2/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+gftadmin@ubuntu:~$ 
+gftadmin@ubuntu:~$ 
+
